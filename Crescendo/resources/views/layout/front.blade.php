@@ -34,7 +34,7 @@
         
         <header>@yield('topbar')</header>
         <nav>@yield('sidebar')</nav>
-        <main class="flex-grow w-full">
+        <main class="flex-grow w-full bg-gradient-to-tl from-teal-400  to-teal-400">
             @if( isset($slot) ) 
             {{ $slot }} 
             @endif
