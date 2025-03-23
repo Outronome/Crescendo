@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', App\Livewire\Pagina\Inicio\Index::class)->name('inicio');
 Route::get('/artista', App\Livewire\Pagina\Artista\Index::class)->name('artista');
@@ -10,3 +11,4 @@ Route::get('/gestao-user', App\Livewire\Pagina\GestaoUser\Index::class)->name('g
 Route::get('/market-place', App\Livewire\Pagina\MarketPlace\Index::class)->name('market');
 Route::get('/whishlist', App\Livewire\Pagina\Whishlist\Index::class)->name('whishlist');
 #Route::get('/perfil', App\Livewire\Pagina\Inicio\Index::class)->name('perfil'); para o NEUL NEUL
+

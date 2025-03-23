@@ -15,6 +15,8 @@ class RouteServiceProvider extends ServiceProvider
 {
     use ForwardsCalls;
 
+    public const HOME = '/Crescendo';
+
     /**
      * The controller namespace for the application.
      *

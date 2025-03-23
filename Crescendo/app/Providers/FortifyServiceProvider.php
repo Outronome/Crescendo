@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Actions\Fortify\CreateNewUser;
+use Laravel\Fortify\Contracts\LoginViewResponse;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
@@ -12,16 +13,30 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Contracts\RegisterResponse;
+use Laravel\Fortify\Contracts\LoginResponse;
+
 
 class FortifyServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
-    public function register(): void
+    public function register()
     {
-        //
+        Fortify::registerView(function(){
+            return view('auth.register');
+        });
     }
+
+    public function login()
+    {
+        Fortify::loginView(function(){
+            return view('auth.login');
+        });
+    }
+
+    
 
     /**
      * Bootstrap any application services.
@@ -42,5 +57,35 @@ class FortifyServiceProvider extends ServiceProvider
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
+        
+        app()->singleton(LoginViewResponse::class, function () {
+            return new class implements LoginViewResponse {
+                public function toResponse($request)
+                {
+                    return view('auth.login'); // Ensure this Blade file exists
+                }
+            };
+        });
+
+        app()->singleton(LoginResponse::class, function () {
+            return new class implements LoginResponse {
+                public function toResponse($request)
+                {
+                    // Redirect user to the 'dashboard' after logging in
+                    return redirect()->route('inicio'); // Change 'dashboard' to your desired route
+                }
+            };
+        });
+
+        app()->singleton(RegisterResponse::class, function () {
+            return new class implements RegisterResponse {
+                public function toResponse($request)
+                {
+                    return redirect()->route('inicio'); // Change 'dashboard' to your desired route
+                }
+            };
+        });
     }
+
+    
 }

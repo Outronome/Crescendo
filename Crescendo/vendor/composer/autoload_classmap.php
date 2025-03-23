@@ -12,6 +12,8 @@ return array(
     'App\\Actions\\Fortify\\UpdateUserPassword' => $baseDir . '/app/Actions/Fortify/UpdateUserPassword.php',
     'App\\Actions\\Fortify\\UpdateUserProfileInformation' => $baseDir . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Livewire\\Layout\\Dropdown' => $baseDir . '/app/Livewire/Layout/Dropdown.php',
+    'App\\Livewire\\Layout\\Topbar' => $baseDir . '/app/Livewire/Layout/Topbar.php',
     'App\\Livewire\\Pagina\\Artista\\Index' => $baseDir . '/app/Livewire/Pagina/Artista/Index.php',
     'App\\Livewire\\Pagina\\Carrinho\\Index' => $baseDir . '/app/Livewire/Pagina/Carrinho/Index.php',
     'App\\Livewire\\Pagina\\Checkout\\Index' => $baseDir . '/app/Livewire/Pagina/Checkout/Index.php',

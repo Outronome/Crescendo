@@ -553,6 +553,8 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'App\\Actions\\Fortify\\UpdateUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserPassword.php',
         'App\\Actions\\Fortify\\UpdateUserProfileInformation' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Livewire\\Layout\\Dropdown' => __DIR__ . '/../..' . '/app/Livewire/Layout/Dropdown.php',
+        'App\\Livewire\\Layout\\Topbar' => __DIR__ . '/../..' . '/app/Livewire/Layout/Topbar.php',
         'App\\Livewire\\Pagina\\Artista\\Index' => __DIR__ . '/../..' . '/app/Livewire/Pagina/Artista/Index.php',
         'App\\Livewire\\Pagina\\Carrinho\\Index' => __DIR__ . '/../..' . '/app/Livewire/Pagina/Carrinho/Index.php',
         'App\\Livewire\\Pagina\\Checkout\\Index' => __DIR__ . '/../..' . '/app/Livewire/Pagina/Checkout/Index.php',

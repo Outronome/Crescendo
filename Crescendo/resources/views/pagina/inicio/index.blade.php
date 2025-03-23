@@ -1,5 +1,24 @@
+
 <section class=  "static bg-cover bg-center h-screen " 
     style = "background-image: url('{{ asset('/assets/img/FotoBG.jpg') }}');">
+   <nav class="absolute top-0 left-0 w-full px-8 py-4 bg-transparent flex justify-between items-center">
+        <div class="text-white text-2xl font-bold">Crescendo</div>
+       @if(!Auth::check())
+        <div class="flex space-x-4">
+            <a href="{{ route('login') }}" class="px-4 py-2 bg-indigo-600 rounded-lg text-white hover:bg-indigo-500">Login</a>
+            <a href="{{ route('register') }}" class="px-4 py-2 bg-indigo-600 rounded-lg text-white hover:bg-indigo-500">Sign Up</a>
+        </div>
+        @endif
+        @if(Auth::check())
+        <div class="flex space-x-4">
+           <form action="{{ route('logout') }}" method="POST">
+           @csrf
+            <button class="px-4 py-2 bg-indigo-600 rounded-lg text-white hover:bg-indigo-500">Logout</button>
+            </form>
+        </div>
+        @endif
+    </nav>
+    @yield('content')
     <div class="flex items-center justify-center h-screen grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-7">
             <h1 class="max-w-2xl mb-4 text-9xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white mb-7 select-none font-gothic  " >Crescendo</h1>

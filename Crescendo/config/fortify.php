@@ -73,7 +73,7 @@ return [
     |
     */
 
-    'home' => '/home',
+    'home' => '/Crescendo/resources/views/pagina/inicio/index',
 
     /*
     |--------------------------------------------------------------------------
