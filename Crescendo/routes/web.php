@@ -12,3 +12,4 @@ Route::get('/market-place', App\Livewire\Pagina\MarketPlace\Index::class)->name(
 Route::get('/whishlist', App\Livewire\Pagina\Whishlist\Index::class)->name('whishlist');
 #Route::get('/perfil', App\Livewire\Pagina\Inicio\Index::class)->name('perfil'); para o NEUL NEUL
 
+

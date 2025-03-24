@@ -124,6 +124,7 @@
 
             <div class="form-footer">
                 <p>Dont have an account? <a href="{{ route('register') }}">Register Here</a></p>
+                <a href="{{ route('password.request') }}" class="forgot-password">Forgot Password?</a>
             </div>
         </form>
     </div>
