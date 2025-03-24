@@ -15,6 +15,7 @@ use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use Laravel\Fortify\Contracts\LoginResponse;
+use Laravel\Fortify\Contracts\ResetPasswordViewResponse;
 
 
 class FortifyServiceProvider extends ServiceProvider
@@ -47,12 +48,17 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
-
+        
+        Fortify::requestPasswordResetLinkView(function () {
+            return view('auth.forgot-password');
+        });
         RateLimiter::for('login', function (Request $request) {
             $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
 
             return Limit::perMinute(5)->by($throttleKey);
         });
+
+        
 
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
@@ -73,6 +79,17 @@ class FortifyServiceProvider extends ServiceProvider
                 {
                     // Redirect user to the 'dashboard' after logging in
                     return redirect()->route('inicio'); // Change 'dashboard' to your desired route
+                }
+            };
+        });
+
+        app()->singleton(ResetPasswordViewResponse::class, function () {
+            return new class implements ResetPasswordViewResponse {
+                public function toResponse($request)
+                {
+                    // Customize the behavior of the response
+                    // Redirect to a custom route or return the reset view directly
+                    return view('auth.reset-password'); // Ensure you have a view for the reset password page
                 }
             };
         });
