@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('artistas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->binary('profile_pic')->nullable();
+            $table->text('bio')->nullable();
             $table->timestamps();
         });
     }

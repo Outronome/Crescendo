@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('wishlist_musicas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('wishlist_id')->constrained('wishlists')->onDelete('cascade');
+            $table->foreignId('musica_id')->constrained('musicas')->onDelete('cascade');
             $table->timestamps();
         });
     }
