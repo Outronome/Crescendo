@@ -10,6 +10,6 @@ class Index extends Component
     #[Layout('layout.front')]
     public function render()
     {
-        return view('pagina.whislist.index');
+        return view('pagina.whishlist.index');
     }
 }

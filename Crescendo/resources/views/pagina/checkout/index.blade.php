@@ -337,7 +337,7 @@
             </div>
           </div>
         </div>
-
+        <!--
         <div class="space-y-4">
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Delivery Methods</h3>
 
