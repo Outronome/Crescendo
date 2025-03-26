@@ -28,7 +28,7 @@ class User extends Authenticatable
 {
     $url = url('/reset-password/' . $token);
 
-    $this->notify(new ResetPassword($url));
+    $this->notify(new ResetPassword($token));
 }
 
     /**

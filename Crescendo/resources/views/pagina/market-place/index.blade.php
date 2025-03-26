@@ -1,10 +1,14 @@
 <div class="static bg-cover bg-center h-screen  bg-[#66c6ba]">
 
+@section('topbar')
+    <livewire:Layout.Topbar />
+  @endsection
+
     <div class=" h-screen w-screen p-4">
 
         <div class=" p-4 w-5/7 h-3/4 flex items-center justify-center mx-[50px] mt-28 bg-[#8bd4cb] rounded-[15px]">
 
-            <div class=" h-full w-1/4 border border-black p-4 flex flex-col  rounded-[15px]">
+            <div class=" h-full w-1/4  p-4 flex flex-col  rounded-[15px]">
 
                 <h1 class="text-2xl font-bold">Filtros</h1>
 
@@ -54,17 +58,9 @@
             </div>
 
             <div
-                class=" flex-row w-full h-full grid grid-cols-5 gap-16  px-16  border border-black p-4 rounded-[15px] ml-[10px] justify-center ">
-                <div class="bg-[#85b2bf] rounded-[15px] w-[200px] h-[250px] ">
-                    <div class="w-full h-2/3 border border-black rounded-tr-[15px] rounded-tl-[15px] overflow-hidden">
-                        <img class="w-full h-full object-cover" src="/assets/img/271.jpg" alt="">
-                    </div>
-
-                </div>
-                <div class="bg-[#85b2bf] rounded-[15px] w-[200px] h-[250px] "></div>
-                <div class="bg-[#85b2bf] rounded-[15px] w-[200px] h-[250px] "></div>
-                <div class="bg-[#85b2bf] rounded-[15px] w-[200px] h-[250px] "></div>
-                <div class="bg-[#85b2bf] rounded-[15px] w-[200px] h-[250px] "></div>
+                class=" flex-row w-full h-full grid grid-cols-5 gap-16  px-16  p-4 rounded-[15px] ml-[10px] justify-center ">
+                
+                
             </div>
         </div>
     </div>
