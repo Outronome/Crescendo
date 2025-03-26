@@ -1,4 +1,4 @@
-<div class="static bg-cover bg-center h-screen  bg-[#66c6ba]">
+<div class="static bg-cover bg-center h-screen  bg-[#85b2bf]">
 
 @section('topbar')
     <livewire:Layout.Topbar />
@@ -6,7 +6,7 @@
 
     <div class=" h-screen w-screen p-4">
 
-        <div class=" p-4 w-5/7 h-3/4 flex items-center justify-center mx-[50px] mt-28 bg-[#8bd4cb] rounded-[15px]">
+        <div class=" p-4 w-5/7 h-3/4 flex items-center justify-center mx-[50px] mt-28 bg-[#649dad] rounded-[15px]">
 
             <div class=" h-full w-1/4  p-4 flex flex-col  rounded-[15px]">
 
