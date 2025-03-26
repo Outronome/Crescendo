@@ -1,6 +1,9 @@
 
 <section class=  "static bg-cover bg-center h-screen " 
     style = "background-image: url('{{ asset('/assets/img/FotoBG.jpg') }}');">
+    @section('topbar')
+    <livewire:Layout.Topbar />
+  @endsection
    <nav class="absolute top-0 left-0 w-full px-8 py-4 bg-transparent flex justify-between items-center">
         <div class="text-white text-2xl font-bold">Crescendo</div>
        @if(!Auth::check())

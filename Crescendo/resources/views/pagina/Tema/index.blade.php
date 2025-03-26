@@ -1,4 +1,7 @@
 <div>
+@section('topbar')
+    <livewire:Layout.Topbar />
+  @endsection
 <div class="content-evenly shrink  w-full mt-8  ">
             <div class=" bg-white px-4 pr-6">
                 <div class="flex justify-between items-center pb-8 pt-4">

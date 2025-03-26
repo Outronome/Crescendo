@@ -1,1 +1,3 @@
-<div>TOCA A TRABALHAR PERGUIÇOSOS</div>
+<div>@section('topbar')
+    <livewire:Layout.Topbar />
+  @endsectionTOCA A TRABALHAR PERGUIÇOSOS</div>

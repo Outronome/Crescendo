@@ -1,4 +1,7 @@
 <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+@section('topbar')
+    <livewire:Layout.Topbar />
+  @endsection
   <form action="#" class="mx-auto max-w-screen-xl px-4 2xl:px-0">
     <div class="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12 xl:gap-16">
       <div class="min-w-0 flex-1 space-y-8">
