@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Marketplace extends Model
 {
-    //
+    protected $fillable = [
+        'nome',
+        'descricao',
+    ];
 }
