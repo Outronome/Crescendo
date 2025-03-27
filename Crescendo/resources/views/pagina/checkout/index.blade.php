@@ -1,4 +1,4 @@
-<section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+<section class=" py-8 antialiased bg-[#85b2bf] md:py-16 h-screen">
 @section('topbar')
     <livewire:Layout.Topbar />
   @endsection

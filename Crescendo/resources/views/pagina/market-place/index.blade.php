@@ -6,7 +6,7 @@
 
     <div class=" h-screen w-screen p-4">
 
-        <div class=" p-4 w-5/7 h-3/4 flex items-center justify-center mx-[50px] mt-28 bg-[#649dad] rounded-[15px]">
+        <div class=" p-4 w-5/7 h-3/4 flex items-center justify-center mx-[50px] mt-28  rounded-[15px]">
 
             <div class=" h-full w-1/4  p-4 flex flex-col  rounded-[15px]">
 
@@ -58,7 +58,7 @@
             <div
                 class=" flex-row w-full h-full grid grid-cols-4 gap-16  px-16  p-4 rounded-[15px] ml-[10px] justify-center ">
                 
-                    <div class="bg-[#85b2bf] p-8 rounded-lg shadow-md w-80 h-5/6">
+                    <div class="bg-[#649dad] p-8 rounded-lg shadow-md w-80 h-5/6">
                         <!-- Album Cover -->
                         <img src="https://telegra.ph/file/2acfcad8d39e49d95addd.jpg" alt="idk - Highvyn, Taylor Shin"
                             class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-black">

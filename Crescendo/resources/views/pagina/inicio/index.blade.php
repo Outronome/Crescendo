@@ -6,8 +6,8 @@
         <div class="text-white text-2xl font-bold">Crescendo</div>
        @if(!Auth::check())
         <div class="flex space-x-4">
-            <a href="{{ route('login') }}" class="px-4 py-2 bg-indigo-600 rounded-lg text-white hover:bg-indigo-500">Login</a>
-            <a href="{{ route('register') }}" class="px-4 py-2 bg-indigo-600 rounded-lg text-white hover:bg-indigo-500">Sign Up</a>
+            <a href="{{ route('login') }}" class="px-4 py-2 bg-[#85b2bf] rounded-lg text-white hover:bg-indigo-500">Login</a>
+            <a href="{{ route('register') }}" class="px-4 py-2 bg-[#85b2bf] rounded-lg text-white hover:bg-indigo-500">Sign Up</a>
         </div>
         @endif
         @if(Auth::check())
