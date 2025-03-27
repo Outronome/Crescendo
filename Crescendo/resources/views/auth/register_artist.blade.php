@@ -176,7 +176,7 @@
                     <div class="form-footerartist">
                         <p>Want to be an artist? <a href="">Create artist acc here</a></p>
                     </div>
-
+                    
                  </form>
             </div>
         </div>
