@@ -1,5 +1,6 @@
 <nav class="p-4 bg-[#85b2bf]">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative">
         <a href="#" class="flex items-center space-x-3">
             <img src="/assets/img/Crescendo_symbol.png" class="h-12" alt="Logo" />
@@ -14,7 +15,7 @@
             </div>
 
             <!-- Carrinho -->
-            <button onclick="window.location.href='{{ route('carrinho') }}'">
+            <button onclick="window.location.href='{{ route('carrinho') }}'" class="hidden md:block">
                 <i
                     class="fi fi-br-cart-shopping-fast text-2xl p-1 pl-2 pr-2 rounded-lg hover:bg-[#85b2bf] text-white"></i>
             </button>
@@ -35,25 +36,41 @@
                 id="navbar-hamburger">
                 <ul class="flex flex-col font-medium">
                     <li>
-                        <a href="{{ route('market') }}"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">Marketplace</a>
+                        <a href="{{ route('market') }}" class="flex items-center space-x-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                             dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
+                            <!-- Ícone de Marketplace -->
+                            <i class="fi fi-br-shop pt-1"></i>
+                            <span>Marketplace</span>
+                        </a>
+
                     </li>
                     <li>
                         <a href=" {{ route('carrinho') }}"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">Carrinho</a>
+                        class="block md:hidden py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
+                                class="fi fi-br-cart-shopping-fast pt-1"></i>
+                            <span>Carrinho</span></a>
+                        </a>
                     </li>
                     <li>
-                        <a href=" {{ route('perfil') }}" class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] "
-                            aria-current="page">Perfil</a>
+                        <a href=" {{ route('perfil') }}"
+                            class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
+                                class="fi fi-br-user pt-1"></i>
+                            <span>Profile</span></a>
                     </li>
                     <li>
                         <a href=" {{ route('whishlist') }}"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">Wishlist</a>
+                            class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
+                                class="fi fi-br-heart pt-1"></i>
+                            <span>Wishlist</span>
+                        </a>
                     </li>
-                    <li>
-                        <a href=" {{ route('logout') }}"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">Logout</a>
-                    </li>
+                   
+                    @auth
+                        <a href="{{ route('logout') }}"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
+                            Logout
+                        </a>
+                    @endauth
 
 
                 </ul>
