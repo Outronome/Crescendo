@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Actions\Fortify\CreateNewUser;
-use Laravel\Fortify\Contracts\LoginViewResponse;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
@@ -16,7 +15,7 @@ use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use Laravel\Fortify\Contracts\LoginResponse;
 use Laravel\Fortify\Contracts\ResetPasswordViewResponse;
-
+use Illuminate\Support\Facades\Auth;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -25,95 +24,65 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Fortify::registerView(function(){
+        Fortify::registerView(function() {
             return view('auth.register');
         });
     }
-
-    public function login()
-    {
-        Fortify::loginView(function(){
-            return view('auth.login');
-        });
-    }
-
-    
 
     /**
      * Bootstrap any application services.
      */
     public function boot(): void
     {
+        // User creation, update, and reset logic
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
         
+        // Views for Fortify actions
+        Fortify::registerView(function() {
+            return view('auth.register');
+        });
+
+        Fortify::loginView(function() {
+            return view('auth.login');
+        });
+
         Fortify::requestPasswordResetLinkView(function () {
             return view('auth.forgot-password');
         });
-        RateLimiter::for('login', function (Request $request) {
-            $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
-
-            return Limit::perMinute(5)->by($throttleKey);
+        Fortify::resetPasswordView(function () {
+            return view('auth.reset-password'); // You can replace with your custom view
         });
 
-        
+        // Email verification view
+        Fortify::verifyEmailView(function() {
+            return view('auth.verify-email');
+        });
+
+        // Rate limiting configurations
+        RateLimiter::for('login', function (Request $request) {
+            $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())) . '|' . $request->ip());
+            return Limit::perMinute(5)->by($throttleKey);
+        });
 
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
-        
-        app()->singleton(LoginViewResponse::class, function () {
-            return new class implements LoginViewResponse {
-                public function toResponse($request)
-                {
-                    return view('auth.login'); // Ensure this Blade file exists
-                }
-            };
-        });
-
-        app()->singleton(LoginResponse::class, function () {
-            return new class implements LoginResponse {
-                public function toResponse($request)
-                {
-                    // Redirect user to the 'dashboard' after logging in
-                    return redirect()->route('inicio'); // Change 'dashboard' to your desired route
-                }
-            };
-        });
-
-        app()->singleton(ResetPasswordViewResponse::class, function () {
-            return new class implements ResetPasswordViewResponse {
-                public function toResponse($request)
-                {
-                    // Customize the behavior of the response
-                    // Redirect to a custom route or return the reset view directly
-                    return view('auth.reset-password'); // Ensure you have a view for the reset password page
-                }
-            };
-        });
 
         app()->singleton(RegisterResponse::class, function () {
             return new class implements RegisterResponse {
                 public function toResponse($request)
                 {
-                    return redirect()->route('login'); // Change 'dashboard' to your desired route
+                  // Log the user out after registration
+                    return redirect()->route('verification.notice'); // Redirect to verification notice
                 }
             };
         });
-        
-        app()->singleton(RegisterResponse::class, function () {
-            return new class implements RegisterResponse {
-                public function toResponse($request)
-                {
-                    return redirect()->route('inicio'); // Altera para a rota correta da homepage
-                }
-            };
-        });
-        
+
+    
+
+
     }
-    
-
-    
 }

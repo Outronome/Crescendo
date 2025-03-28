@@ -61,7 +61,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user = $creator->create($request->all())));
 
-        
+        $this->guard->login($user, false);
 
         return app(RegisterResponse::class);
     }

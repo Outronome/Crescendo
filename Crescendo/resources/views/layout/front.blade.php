@@ -19,7 +19,7 @@
             ::-webkit-scrollbar-thumb {
                 background: #dad7d7;
             }
-            /* tirar o butao de aumentar e diminuir no input numerico */
+            /* tirar o botao de aumentar e diminuir no input numerico */
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button{
                 -webkit-appearance: none;
