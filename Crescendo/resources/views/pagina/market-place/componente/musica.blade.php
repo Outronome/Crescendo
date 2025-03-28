@@ -1,4 +1,4 @@
-<div class="bg-[#649dad] p-8 rounded-lg shadow-md w-80 h-5/6">
+<div class="bg-[#649dad] p-8 rounded-lg shadow-md w-80 h-[500px] ml-[20px]">
     <!-- Album Cover -->
     <img src="https://telegra.ph/file/2acfcad8d39e49d95addd.jpg" alt="idk - Highvyn, Taylor Shin"
         class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-black">
