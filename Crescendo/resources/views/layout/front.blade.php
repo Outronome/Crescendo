@@ -30,7 +30,7 @@
         @vite('resources/js/app.js')
     </head>
 
-    <body class="flex flex-col   max-h-screen w-full" x-data="{ isSidebarExpanded: false }">
+    <body class="flex flex-col   max-h-screen w-full bg-[#85b2bf]" x-data="{ isSidebarExpanded: false }">
         
         <header>@yield('topbar')</header>
         <nav>@yield('sidebar')</nav>
