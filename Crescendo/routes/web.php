@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', App\Livewire\Pagina\Inicio\Index::class)->name('inicio');
@@ -12,7 +13,7 @@ Route::get('/market-place', App\Livewire\Pagina\MarketPlace\Index::class)->name(
 Route::get('/whishlist', App\Livewire\Pagina\Whishlist\Index::class)->name('whishlist');
 Route::get('/tema', App\Livewire\Pagina\Tema\Index::class)->name('tema');
 Route::get('/perfil', App\Livewire\Pagina\Inicio\Index::class)->name('perfil');
-
-
-
-
+Route::post('/register-artist', [ArtistController::class, 'registerArtist']);
+Route::get('/register-artist', function () {
+    return view('auth.register-artist'); // Return the form view
+})->name('register-artist');
