@@ -112,6 +112,10 @@
                                     class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login
                                     here</a>
                             </p>
+                            <p class="text-sm font-light text-black dark:black">
+                                Want to become an Artist? <a href="{{ route('register-artist') }}"
+                                    class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign Up here</a>
+                            </p>
                         </form>
                     </div>
                 </div>

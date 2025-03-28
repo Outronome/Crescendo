@@ -103,6 +103,15 @@ class FortifyServiceProvider extends ServiceProvider
             };
         });
         
+        app()->singleton(RegisterResponse::class, function () {
+            return new class implements RegisterResponse {
+                public function toResponse($request)
+                {
+                    return redirect()->route('inicio'); // Altera para a rota correta da homepage
+                }
+            };
+        });
+        
     }
     
 
