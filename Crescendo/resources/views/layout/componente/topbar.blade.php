@@ -1,4 +1,4 @@
-<nav class="p-4 bg-[#85b2bf]">
+<nav class="fixed w-full top-5 z-50 bg-transparent">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative">
@@ -13,13 +13,13 @@
                 <input type="text" id="search-navbar" class="w-40 p-2 text-sm text-white shadow rounded-lg bg-[#8bd4cb] 
                       dark:text-white" placeholder="Search">
             </div>
-
-            <!-- Carrinho -->
-            <button onclick="window.location.href='{{ route('carrinho') }}'" class="hidden md:block">
-                <i
-                    class="fi fi-br-cart-shopping-fast text-2xl p-1 pl-2 pr-2 rounded-lg hover:bg-[#85b2bf] text-white"></i>
-            </button>
-
+            @if(Auth::check())
+                <!-- Carrinho -->
+                <button onclick="window.location.href='{{ route('carrinho') }}'" class="hidden md:block">
+                    <i
+                        class="fi fi-br-cart-shopping-fast text-2xl p-1 pl-2 pr-2 rounded-lg hover:bg-[#85b2bf] text-white"></i>
+                </button>
+            @endif
 
             <!-- Menu -->
 
@@ -35,6 +35,16 @@
             <div class="hidden absolute right-0 top-full mt-2 w-48  bg-[#8bd4cb] dark:border-gray-700 rounded-lg shadow-lg"
                 id="navbar-hamburger">
                 <ul class="flex flex-col font-medium">
+                <li>
+                        <a href="{{ route('inicio') }}" class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                             dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
+                            <!-- Ícone de Marketplace -->
+                            <i class="fi fi-br-home pt-1"></i>
+                            <span>Landing Page</span>
+                        </a>
+
+                    </li>
+
                     <li>
                         <a href="{{ route('market') }}" class="flex items-center space-x-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
                              dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
@@ -46,8 +56,8 @@
                     </li>
                     <li>
                         <a href=" {{ route('carrinho') }}"
-                        class="block md:hidden py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
-                                class="fi fi-br-cart-shopping-fast pt-1"></i>
+                            class="block md:hidden py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] "
+                            aria-current="page"><i class="fi fi-br-cart-shopping-fast pt-1"></i>
                             <span>Carrinho</span></a>
                         </a>
                     </li>
@@ -64,13 +74,48 @@
                             <span>Wishlist</span>
                         </a>
                     </li>
-                   
-                    @auth
-                        <a href="{{ route('logout') }}"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
-                            Logout
-                        </a>
-                    @endauth
+                    @if(!Auth::check())
+                        <li>
+
+                            <a href="{{ route('login') }}"
+                                class="flex items-center space-x-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                                                             dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
+                                <!-- Ícone de Marketplace -->
+                                <i class="fi fi-br-sign-in-alt pt-1"></i>
+                                <span>Login</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="{{ route('register') }}"
+                                class="flex items-center space-x-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                                                             dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
+                                <!-- Ícone de Marketplace -->
+                                <i class="fi fi-br-smile-plus pt-1"></i>
+                                <span>Register</span>
+                            </a>
+
+                        </li>
+                    @endif
+
+                    @if(Auth::check())
+
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <a class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                                dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white ">
+                                <button class="w-full text-start "><i
+                                        class="fi fi-br-sign-out-alt pt-1"></i>
+                                    Logout</button>
+                                </a>
+                               
+                            </form>
+
+
+                        </li>
+                    @endif
 
 
                 </ul>
