@@ -1,4 +1,4 @@
-<div class="scroll-container bg-cover bg-center bg-fixed w-full min-h-screen overflow-y-scroll snap-y scroll-smooth"
+<div class="scroll-container bg-cover bg-center bg-fixed w-full min-h-screen overflow-y-scroll snap-y scroll-smooth -mt-16"
 
     style="background-image: url('/assets/img/FotoBG.jpg');">
     

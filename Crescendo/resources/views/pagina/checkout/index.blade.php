@@ -1,11 +1,11 @@
-<section class=" py-8 antialiased bg-[#85b2bf] md:py-16 h-screen">
+<section class=" py-8 antialiased  md:py-16 h-screen">
 @section('topbar')
     <livewire:Layout.Topbar />
   @endsection
-  <form action="#" class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+  <form action="#" class="mx-auto max-w-screen-xl  2xl:px-0  rounded-md bg-[#649dad] ">
     <div class="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12 xl:gap-16">
       <div class="min-w-0 flex-1 space-y-8">
-        <div class="space-y-4">
+        <div class="space-y-4 p-5">
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Delivery Details</h2>
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -272,7 +272,7 @@
           </div>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-4 p-5">
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Payment</h3>
 
           <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -324,7 +324,7 @@
                   <input id="paypal-2" aria-describedby="paypal-text" type="radio" name="payment-method" value="" class="h-4 w-4 border-gray-300 bg-white text-primary-600 focus:ring-2 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
                 </div>
 
-                <div class="ms-4 text-sm">
+                <div class="ms-4 text-sm ">
                   <label for="paypal-2" class="font-medium leading-none text-gray-900 dark:text-white"> Paypal account </label>
                   <p id="paypal-text" class="mt-1 text-xs font-normal text-gray-500 dark:text-gray-400">Connect to your account</p>
                 </div>

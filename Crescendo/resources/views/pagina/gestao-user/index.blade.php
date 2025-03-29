@@ -1,13 +1,13 @@
 <div>
 @section('topbar')
     <livewire:Layout.Topbar />
-  @endsection 
-  <div class="flex justify-center items-center h-screen">
+  @endsection
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative mt-20 ">
       @if ($modal_atribuicao_utilizadores != true)
           {{--<!--<livewire:Paginas.Utilizadores.Componente.ModalAtribuicaoUtilizadores :utilizador_id="3" :role_id="$role_id"/>-->--}}
       @endif
-      <div class="flex flex-col bg-white w-full p-10 shadow-lg rounded-lg ml-28 mx-8 space-y-5 my-5">
-          <div class="flex w-[40%]">
+      <div class="w-full  items-center justify-between mx-auto relative rounded-md  p-6 bg-[#649dad]">
+          <div class="flex w-[60%]">
               <div class="flex-1 justify-start w-[40%] mb-8">
                   <div class="relative flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -44,9 +44,9 @@
                   <tbody>
                       @foreach ($utilizadores as $utilizador)
                           <tr class="border-b border-gray-200">
-                              <td class="px-4 py-3">{{ $utilizador->id }}</td>
-                              <td class="px-4 py-3">{{ $utilizador->name }}</td>
-                              <td class="px-4 py-3">{{ $utilizador->email }}</td>
+                              <td class="px-4 py-3 font-semibold">{{ $utilizador->id }}</td>
+                              <td class="px-4 py-3 font-semibold">{{ $utilizador->name }}</td>
+                              <td class="px-4 py-3 font-semibold ">{{ $utilizador->email }}</td>
                               <td class="py-3 text-center">
                                   <div class="grid grid-cols-4 space-y-2 space-x-1">
                                       {{--@foreach ($utilizador->permissions as $permissao)

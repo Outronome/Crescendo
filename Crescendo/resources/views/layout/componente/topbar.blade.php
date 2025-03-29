@@ -2,8 +2,8 @@
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative">
-        <a href="#" class="flex items-center space-x-3">
-            <img src="/assets/img/Crescendo_symbol.png" class="h-12" alt="Logo" />
+        <a href="{{ route('inicio') }}" class="flex items-center space-x-3">
+            <img src="/assets/img/Crescendo_symbol.png" class="h-12" alt="Logo"  />
             <span class="text-2xl font-semibold text-white">Crescendo</span>
         </a>
 
@@ -35,15 +35,6 @@
             <div class="hidden absolute right-0 top-full mt-2 w-48  bg-[#8bd4cb] dark:border-gray-700 rounded-lg shadow-lg"
                 id="navbar-hamburger">
                 <ul class="flex flex-col font-medium">
-                <li>
-                        <a href="{{ route('inicio') }}" class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
-                             dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
-                            <!-- Ícone de Marketplace -->
-                            <i class="fi fi-br-home pt-1"></i>
-                            <span>Landing Page</span>
-                        </a>
-
-                    </li>
 
                     <li>
                         <a href="{{ route('market') }}" class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
@@ -79,7 +70,7 @@
 
                             <a href="{{ route('login') }}"
                                 class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
-                                                             dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
+                                                                 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
                                 <!-- Ícone de Marketplace -->
                                 <i class="fi fi-br-sign-in-alt pt-1"></i>
                                 <span>Login</span>
@@ -90,7 +81,7 @@
                         <li>
                             <a href="{{ route('register') }}"
                                 class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
-                                                             dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
+                                                                 dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
                                 <!-- Ícone de Marketplace -->
                                 <i class="fi fi-br-smile-plus pt-1"></i>
                                 <span>Register</span>
@@ -105,17 +96,23 @@
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <a class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
-                                dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white ">
-                                <button class="w-full text-start "><i
-                                        class="fi fi-br-sign-out-alt pt-1"></i>
-                                    Logout</button>
+                                    dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white ">
+                                    <button class="w-full text-start "><i class="fi fi-br-sign-out-alt pt-1"></i>
+                                        Logout</button>
                                 </a>
-                               
+
                             </form>
 
 
                         </li>
                     @endif
+                    <li>
+                        <a href=" {{ route('gestao-user') }}"
+                            class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
+                                class="fi fi-br-stats pt-1"></i>
+                            <span>Painel Users</span>
+                        </a>
+                    </li>
 
 
                 </ul>

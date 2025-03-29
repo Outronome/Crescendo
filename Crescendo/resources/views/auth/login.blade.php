@@ -39,10 +39,7 @@
     <main class="bg-[#85b2bf]">
         <section class="">
             <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img class="w-8 h-8 mr-2" src="/assets/img/Symbol.png" alt="logo">
-                    Crescendo
-                </a>
+               
                 <form action="{{ route('login') }}" method="POST" 
                     class="w-full bg-[#649dad] rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">
                     @csrf

@@ -32,8 +32,8 @@
 
     <body class="flex flex-col  max-h-screen w-full bg-[#85b2bf]" x-data="{ isSidebarExpanded: false }">
         
-        <header>@yield('topbar')</header>
-        <nav class="mb-16">@yield('sidebar')</nav>
+        <header class="pb-16">@yield('topbar')</header>
+        <nav class="">@yield('sidebar')</nav>
         <main class="">
             @if( isset($slot) ) 
             {{ $slot }} 
