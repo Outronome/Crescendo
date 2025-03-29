@@ -34,10 +34,13 @@
 
 <body class="flex flex-col   max-h-screen w-full" x-data="{ isSidebarExpanded: false }">
 
-    <header>@yield('topbar')</header>
-    <nav>@yield('sidebar')</nav>
+    <header><livewire:layout.topbar></header>
+    
     <main class="">
+
         <section class="bg-[#85b2bf]">
+      
+
             <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                     <img class="w-8 h-8 mr-2" src="/assets/img/Symbol.png" alt="logo">
@@ -47,7 +50,7 @@
                 <div class="w-full bg-[#649dad] rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                         <h1
-                            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                            class="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl dark:text-white">
                             Create an account
                         </h1>
                         <form class="space-y-4 md:space-y-6" action="{{ route('register') }}" method="POST">
@@ -56,7 +59,7 @@
                                 <label for="text"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
                                 <input type="text" name="name" id="name"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Batata" required="">
                                 @error('name')
                                     <span class="error">{{ $message }}</span>
@@ -67,7 +70,7 @@
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                                     email</label>
                                 <input type="email" name="email" id="email"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="name@company.com" required="">
                                 @error('email')
                                     <span class="error">{{ $message }}</span>
@@ -77,7 +80,7 @@
                                 <label for="password"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                                 <input type="password" name="password" id="password" placeholder="Password"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     required="">
                                 @error('password')
                                     <span class="error">{{ $message }}</span>
@@ -89,7 +92,7 @@
                                     password</label>
                                 <input type="password" name="password_confirmation" id="password_confirmation"
                                     placeholder=" Confirm Password"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     required="">
                             </div>
                             <div class="flex items-start">
@@ -105,7 +108,7 @@
                                 </div>
                             </div>
                             <button type="submit"
-                                class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#85b2bf] dark:focus:bg-[#649dad] dark:focus:bg-[#649dad]">Create
+                                class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#85b2bf]  dark:focus:bg-[#649dad]">Create
                                 an account</button>
                             <p class="text-sm font-light text-black dark:black">
                                 Already have an account? <a href="{{ route('login') }}"
@@ -114,7 +117,8 @@
                             </p>
                             <p class="text-sm font-light text-black dark:black">
                                 Want to become an Artist? <a href="{{ route('register-artist') }}"
-                                    class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign Up here</a>
+                                    class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign Up
+                                    here</a>
                             </p>
                         </form>
                     </div>

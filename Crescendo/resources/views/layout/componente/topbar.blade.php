@@ -46,7 +46,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ route('market') }}" class="flex items-center space-x-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                        <a href="{{ route('market') }}" class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
                              dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
                             <!-- Ícone de Marketplace -->
                             <i class="fi fi-br-shop pt-1"></i>
@@ -78,7 +78,7 @@
                         <li>
 
                             <a href="{{ route('login') }}"
-                                class="flex items-center space-x-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                                class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
                                                              dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
                                 <!-- Ícone de Marketplace -->
                                 <i class="fi fi-br-sign-in-alt pt-1"></i>
@@ -89,7 +89,7 @@
 
                         <li>
                             <a href="{{ route('register') }}"
-                                class="flex items-center space-x-2 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
+                                class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
                                                              dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
                                 <!-- Ícone de Marketplace -->
                                 <i class="fi fi-br-smile-plus pt-1"></i>
