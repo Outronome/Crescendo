@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('musicas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('artist_id')->constrained('artistas')->onDelete('cascade');
+            $table->foreignId('artist_id')->constrained('users')->onDelete('cascade');
             $table->string('title');
             $table->string('genero');
             $table->decimal('price', 8, 2)->nullable();

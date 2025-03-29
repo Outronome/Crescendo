@@ -1,17 +1,17 @@
-<section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-8">
+<section class="py-8 antialiased md:py-8">
   @section('topbar')
-    <livewire:Layout.Topbar />
+  <livewire:Layout.Topbar />
   @endsection
   <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
-    
-  <div class="flex items-center justify-between mb-4">
-    <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Visão Geral</h2>
-    <button type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2" class="">
-      <svg class="h-7 w-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"></path>
-      </svg>
-    </button>
-  </div>
+
+    <div class="flex items-center justify-between py-4 border-t border-gray-200">
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Visão Geral</h2>
+      <button type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2" class="">
+        <svg class="h-7 w-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"></path>
+        </svg>
+      </button>
+    </div>
 
     <div class="grid grid-cols-2 gap-6 border-b border-t border-gray-200 py-4 dark:border-gray-700 md:py-8 lg:grid-cols-4 xl:gap-16">
       <div>
@@ -19,8 +19,7 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
         </svg>
         <h3 class="mb-2 text-gray-500 dark:text-gray-400">Orders made</h3>
-        <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white"
-          >24
+        <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white">24
           <span class="ms-2 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
             <svg class="-ms-1 me-1 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"></path>
@@ -40,8 +39,7 @@
           <path stroke="currentColor" stroke-width="2" d="M11.083 5.104c.35-.8 1.485-.8 1.834 0l1.752 4.022a1 1 0 0 0 .84.597l4.463.342c.9.069 1.255 1.2.556 1.771l-3.33 2.723a1 1 0 0 0-.337 1.016l1.03 4.119c.214.858-.71 1.552-1.474 1.106l-3.913-2.281a1 1 0 0 0-1.008 0L7.583 20.8c-.764.446-1.688-.248-1.474-1.106l1.03-4.119A1 1 0 0 0 6.8 14.56l-3.33-2.723c-.698-.571-.342-1.702.557-1.771l4.462-.342a1 1 0 0 0 .84-.597l1.753-4.022Z" />
         </svg>
         <h3 class="mb-2 text-gray-500 dark:text-gray-400">Reviews added</h3>
-        <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white"
-          >16
+        <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white">16
           <span class="ms-2 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
             <svg class="-ms-1 me-1 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"></path>
@@ -61,8 +59,7 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
         </svg>
         <h3 class="mb-2 text-gray-500 dark:text-gray-400">Favorite products added</h3>
-        <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white"
-          >8
+        <span class="flex items-center text-2xl font-bold text-gray-900 dark:text-white">8
           <span class="ms-2 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
             <svg class="-ms-1 me-1 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"></path>
@@ -77,7 +74,7 @@
           vs 10 last 3 months
         </p>
       </div>
-      
+
     </div>
     <div class="py-4 md:py-8">
       <div class="mb-4 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:gap-16">
@@ -126,8 +123,7 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M6 12c.263 0 .524-.06.767-.175a2 2 0 0 0 .65-.491c.186-.21.333-.46.433-.734.1-.274.15-.568.15-.864a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 12 9.736a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 16 9.736c0 .295.052.588.152.861s.248.521.434.73a2 2 0 0 0 .649.488 1.809 1.809 0 0 0 1.53 0 2.03 2.03 0 0 0 .65-.488c.185-.209.332-.457.433-.73.1-.273.152-.566.152-.861 0-.974-1.108-3.85-1.618-5.121A.983.983 0 0 0 17.466 4H6.456a.986.986 0 0 0-.93.645C5.045 5.962 4 8.905 4 9.736c.023.59.241 1.148.611 1.567.37.418.865.667 1.389.697Zm0 0c.328 0 .651-.091.94-.266A2.1 2.1 0 0 0 7.66 11h.681a2.1 2.1 0 0 0 .718.734c.29.175.613.266.942.266.328 0 .651-.091.94-.266.29-.174.537-.427.719-.734h.681a2.1 2.1 0 0 0 .719.734c.289.175.612.266.94.266.329 0 .652-.091.942-.266.29-.174.536-.427.718-.734h.681c.183.307.43.56.719.734.29.174.613.266.941.266a1.819 1.819 0 0 0 1.06-.351M6 12a1.766 1.766 0 0 1-1.163-.476M5 12v7a1 1 0 0 0 1 1h2v-5h3v5h7a1 1 0 0 0 1-1v-7m-5 3v2h2v-2h-2Z"
-                />
+                  d="M6 12c.263 0 .524-.06.767-.175a2 2 0 0 0 .65-.491c.186-.21.333-.46.433-.734.1-.274.15-.568.15-.864a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 12 9.736a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 16 9.736c0 .295.052.588.152.861s.248.521.434.73a2 2 0 0 0 .649.488 1.809 1.809 0 0 0 1.53 0 2.03 2.03 0 0 0 .65-.488c.185-.209.332-.457.433-.73.1-.273.152-.566.152-.861 0-.974-1.108-3.85-1.618-5.121A.983.983 0 0 0 17.466 4H6.456a.986.986 0 0 0-.93.645C5.045 5.962 4 8.905 4 9.736c.023.59.241 1.148.611 1.567.37.418.865.667 1.389.697Zm0 0c.328 0 .651-.091.94-.266A2.1 2.1 0 0 0 7.66 11h.681a2.1 2.1 0 0 0 .718.734c.29.175.613.266.942.266.328 0 .651-.091.94-.266.29-.174.537-.427.719-.734h.681a2.1 2.1 0 0 0 .719.734c.289.175.612.266.94.266.329 0 .652-.091.942-.266.29-.174.536-.427.718-.734h.681c.183.307.43.56.719.734.29.174.613.266.941.266a1.819 1.819 0 0 0 1.06-.351M6 12a1.766 1.766 0 0 1-1.163-.476M5 12v7a1 1 0 0 0 1 1h2v-5h3v5h7a1 1 0 0 0 1-1v-7m-5 3v2h2v-2h-2Z" />
               </svg>
               Herald Square, 2, New York, United States of America
             </dd>
@@ -153,278 +149,297 @@
           </dl>
         </div>
       </div>
-      <div class="flex justify-around w-full px-8">
-        <button type="button" class="w-1/4 bg-[#8bd4cb] rounded-lg">
-            Musicas
-        </button>
-        <button type="button" class="w-1/4 bg-[#8bd4cb] rounded-lg">
-            Blog
-        </button>
-        <button type="button" class="w-1/4 bg-[#8bd4cb] rounded-lg">
-            Orders
-        </button>
-      </div>
-      
-    </div>
-    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:p-8">
-      <h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">Latest orders</h3>
-      <div class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 pb-4 dark:border-gray-700 md:pb-5">
-        <dl class="w-1/2 sm:w-48">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-            <a href="#" class="hover:underline">#FWB12546798</a>
-          </dd>
-        </dl>
-
-        <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.12.2023</dd>
-        </dl>
-
-        <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$499</dd>
-        </dl>
-
-        <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-          <dd class="me-2 mt-1.5 inline-flex shrink-0 items-center rounded bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
-            <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
-            </svg>
-            In transit
-          </dd>
-        </dl>
-
-        <div class="w-full sm:flex sm:w-32 sm:items-center sm:justify-end sm:gap-4">
-          <button
-            id="actionsMenuDropdownModal10"
-            data-dropdown-toggle="dropdownOrderModal10"
-            type="button"
-            class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 md:w-auto"
-          >
-            Actions
-            <svg class="-me-0.5 ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="dropdownOrderModal10" class="z-10 hidden w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom">
-            <ul class="p-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400" aria-labelledby="actionsMenuDropdown10">
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"></path>
-                  </svg>
-                  <span>Order again</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"></path>
-                    <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
-                  </svg>
-                  Order details
-                </a>
-              </li>
-              <li>
-                <a href="#" data-modal-target="deleteOrderModal" data-modal-toggle="deleteOrderModal" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"></path>
-                  </svg>
-                  Cancel order
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div class="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="sm:hidden">
+          <label for="tabs" class="sr-only">Select tab</label>
+          <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option>Musicas</option>
+            <option>Blog</option>
+            <option>Ultimas Compras</option>
+          </select>
         </div>
-      </div>
-      <div class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
-        <dl class="w-1/2 sm:w-48">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-            <a href="#" class="hover:underline">#FWB12546777</a>
-          </dd>
-        </dl>
-
-        <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">10.11.2024</dd>
-        </dl>
-
-        <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$3,287</dd>
-        </dl>
-
-        <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-          <dd class="mt-1.5 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
-            <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"></path>
-            </svg>
-            Cancelled
-          </dd>
-        </dl>
-
-        <div class="w-full sm:flex sm:w-32 sm:items-center sm:justify-end sm:gap-4">
-          <button
-            id="actionsMenuDropdownModal11"
-            data-dropdown-toggle="dropdownOrderModal11"
-            type="button"
-            class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 md:w-auto"
-          >
-            Actions
-            <svg class="-me-0.5 ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="dropdownOrderModal11" class="z-10 hidden w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom">
-            <ul class="p-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400" aria-labelledby="actionsMenuDropdown11">
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"></path>
-                  </svg>
-                  <span>Order again</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"></path>
-                    <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
-                  </svg>
-                  Order details
-                </a>
-              </li>
-            </ul>
+        <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+          <li class="w-full">
+            <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" class="text-white inline-block w-full p-4 rounded-ss-lg bg-[#8bd4cb] hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Musicas</button>
+          </li>
+          <li class="w-full">
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="text-white inline-block w-full p-4 bg-[#8bd4cb] hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Blog</button>
+          </li>
+          <li class="w-full">
+            <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="text-white inline-block w-full p-4 rounded-se-lg bg-[#8bd4cb] hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Ultimas Compras</button>
+          </li>
+        </ul>
+        <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
+          <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+            @for ($i=0,$j=5;$i<$j;$i++)
+              <livewire:Pagina.Artista.Componente.Musica>
+              @endfor
           </div>
-        </div>
-      </div>
-      <div class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
-        <dl class="w-1/2 sm:w-48">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-            <a href="#" class="hover:underline">#FWB12546846</a>
-          </dd>
-        </dl>
+          <div class="hidden p-4 bg-white rounded-lg md:p-4 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <div class="px-6">
+              <div class="container flex justify-between mx-auto">
+                <div class="w-full">
+                  <div class="mt-6">
+                    <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+                      <div class="flex items-center justify-between"><span class="font-light text-gray-600">Jun 1,
+                          2020</span><a href="#"
+                          class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">Laravel</a>
+                      </div>
+                      <div class="mt-2"><a href="#" class="text-2xl font-bold text-gray-700 hover:underline">Build
+                          Your New Idea with Laravel Freamwork.</a>
+                        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                          Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim
+                          reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4"><a href="#"
+                          class="text-blue-500 hover:underline">Read more</a>
+                        <div><a href="#" class="flex items-center"><img
+                              src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80"
+                              alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                            <h1 class="font-bold text-gray-700 hover:underline">Alex John</h1>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-6">
+                    <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+                      <div class="flex items-center justify-between"><span class="font-light text-gray-600">mar 4,
+                          2019</span><a href="#"
+                          class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">Design</a>
+                      </div>
+                      <div class="mt-2"><a href="#"
+                          class="text-2xl font-bold text-gray-700 hover:underline">Accessibility tools for
+                          designers and developers</a>
+                        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                          Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim
+                          reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4"><a href="#"
+                          class="text-blue-500 hover:underline">Read more</a>
+                        <div><a href="#" class="flex items-center"><img
+                              src="https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=333&amp;q=80"
+                              alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                            <h1 class="font-bold text-gray-700 hover:underline">Jane Doe</h1>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-6">
+                    <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+                      <div class="flex items-center justify-between"><span class="font-light text-gray-600">Feb 14,
+                          2019</span><a href="#"
+                          class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">PHP</a>
+                      </div>
+                      <div class="mt-2"><a href="#" class="text-2xl font-bold text-gray-700 hover:underline">PHP:
+                          Array to Map</a>
+                        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                          Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim
+                          reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4"><a href="#"
+                          class="text-blue-500 hover:underline">Read more</a>
+                        <div><a href="#" class="flex items-center"><img
+                              src="https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=281&amp;q=80"
+                              alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                            <h1 class="font-bold text-gray-700 hover:underline">Lisa Way</h1>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-6">
+                    <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+                      <div class="flex items-center justify-between"><span class="font-light text-gray-600">Dec 23,
+                          2018</span><a href="#"
+                          class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">Django</a>
+                      </div>
+                      <div class="mt-2"><a href="#" class="text-2xl font-bold text-gray-700 hover:underline">Django
+                          Dashboard - Learn by Coding</a>
+                        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                          Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim
+                          reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4"><a href="#"
+                          class="text-blue-500 hover:underline">Read more</a>
+                        <div><a href="#" class="flex items-center"><img
+                              src="https://images.unsplash.com/photo-1500757810556-5d600d9b737d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=735&amp;q=80"
+                              alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                            <h1 class="font-bold text-gray-700 hover:underline">Steve Matt</h1>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-6">
+                    <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+                      <div class="flex items-center justify-between"><span class="font-light text-gray-600">Mar 10,
+                          2018</span><a href="#"
+                          class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">Testing</a>
+                      </div>
+                      <div class="mt-2"><a href="#" class="text-2xl font-bold text-gray-700 hover:underline">TDD
+                          Frist</a>
+                        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                          Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim
+                          reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4"><a href="#"
+                          class="text-blue-500 hover:underline">Read more</a>
+                        <div><a href="#" class="flex items-center"><img
+                              src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=373&amp;q=80"
+                              alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                            <h1 class="font-bold text-gray-700 hover:underline">Khatab Wedaa</h1>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-8 ">
+                    <div class="flex justify-end">
+                      <a href="#" class="px-3 py-2 mx-1 font-medium text-gray-500 bg-white rounded-md cursor-not-allowed">
+                        previous
+                      </a>
 
-        <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">07.11.2024</dd>
-        </dl>
+                      <a href="#" class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                        1
+                      </a>
 
-        <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$111</dd>
-        </dl>
+                      <a href="#" class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                        2
+                      </a>
 
-        <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-          <dd class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-            <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"></path>
-            </svg>
-            Completed
-          </dd>
-        </dl>
+                      <a href="#" class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                        3
+                      </a>
 
-        <div class="w-full sm:flex sm:w-32 sm:items-center sm:justify-end sm:gap-4">
-          <button
-            id="actionsMenuDropdownModal12"
-            data-dropdown-toggle="dropdownOrderModal12"
-            type="button"
-            class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 md:w-auto"
-          >
-            Actions
-            <svg class="-me-0.5 ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="dropdownOrderModal12" class="z-10 hidden w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom">
-            <ul class="p-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400" aria-labelledby="actionsMenuDropdown12">
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"></path>
-                  </svg>
-                  <span>Order again</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"></path>
-                    <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
-                  </svg>
-                  Order details
-                </a>
-              </li>
-            </ul>
+                      <a href="#" class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                        Next
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="flex flex-wrap items-center gap-y-4 pt-4 md:pt-5">
-        <dl class="w-1/2 sm:w-48">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-            <a href="#" class="hover:underline">#FWB12546212</a>
-          </dd>
-        </dl>
+          <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+            <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:p-8">
+              <h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">Latest orders</h3>
+              <div class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 pb-4 dark:border-gray-700 md:pb-5">
+                <dl class="w-1/2 sm:w-48">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                    <a href="#" class="hover:underline">#FWB12546798</a>
+                  </dd>
+                </dl>
 
-        <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">18.10.2024</dd>
-        </dl>
+                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.12.2023</dd>
+                </dl>
 
-        <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-          <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$756</dd>
-        </dl>
+                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$499</dd>
+                </dl>
 
-        <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-          <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-          <dd class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-            <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"></path>
-            </svg>
-            Completed
-          </dd>
-        </dl>
+                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+                  <dd class="me-2 mt-1.5 inline-flex shrink-0 items-center rounded bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"></path>
+                    </svg>
+                    Em negociação
+                  </dd>
+                </dl>
 
-        <div class="w-full sm:flex sm:w-32 sm:items-center sm:justify-end sm:gap-4">
-          <button
-            id="actionsMenuDropdownModal13"
-            data-dropdown-toggle="dropdownOrderModal13"
-            type="button"
-            class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 md:w-auto"
-          >
-            Actions
-            <svg class="-me-0.5 ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="dropdownOrderModal13" class="z-10 hidden w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom">
-            <ul class="p-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400" aria-labelledby="actionsMenuDropdown13">
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"></path>
-                  </svg>
-                  <span>Order again</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <svg class="me-1.5 h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"></path>
-                    <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
-                  </svg>
-                  Order details
-                </a>
-              </li>
-            </ul>
+
+              </div>
+              <div class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
+                <dl class="w-1/2 sm:w-48">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                    <a href="#" class="hover:underline">#FWB12546777</a>
+                  </dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">10.11.2024</dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$3,287</dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+                  <dd class="mt-1.5 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
+                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"></path>
+                    </svg>
+                    Cancelled
+                  </dd>
+                </dl>
+              </div>
+              <div class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
+                <dl class="w-1/2 sm:w-48">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                    <a href="#" class="hover:underline">#FWB12546846</a>
+                  </dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">07.11.2024</dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$111</dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+                  <dd class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"></path>
+                    </svg>
+                    Completed
+                  </dd>
+                </dl>
+
+
+              </div>
+              <div class="flex flex-wrap items-center gap-y-4 pt-4 md:pt-5">
+                <dl class="w-1/2 sm:w-48">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                    <a href="#" class="hover:underline">#FWB12546212</a>
+                  </dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">18.10.2024</dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$756</dd>
+                </dl>
+
+                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+                  <dd class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"></path>
+                    </svg>
+                    Completed
+                  </dd>
+                </dl>
+
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -480,8 +495,7 @@
                           fill="url(#paint0_linear_343_121520)"
                           fill-rule="evenodd"
                           d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z"
-                          clip-rule="evenodd"
-                        />
+                          clip-rule="evenodd" />
                       </g>
                     </g>
                     <defs>
@@ -522,8 +536,7 @@
                                   fill="url(#paint0_linear_343_121520)"
                                   fill-rule="evenodd"
                                   d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z"
-                                  clip-rule="evenodd"
-                                />
+                                  clip-rule="evenodd" />
                               </g>
                             </g>
                             <defs>
@@ -581,8 +594,7 @@
                                 fill="#fff"
                                 fill-rule="evenodd"
                                 d="M4.2 11.933l-.823.433.157-.916-.666-.65.92-.133.412-.834.411.834.92.134-.665.649.157.916-.823-.433zm9.8.7l-.66.194.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.194zm0-8.866l-.66.193.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.193zm2.8 2.8l-.66.193.193-.66-.193-.66.66.193.66-.193-.193.66.193.66-.66-.193zm-5.6.933l-.66.193.193-.66-.193-.66.66.194.66-.194-.193.66.193.66-.66-.193zm4.2 1.167l-.33.096.096-.33-.096-.33.33.097.33-.097-.097.33.097.33-.33-.096z"
-                                clip-rule="evenodd"
-                              />
+                                clip-rule="evenodd" />
                             </g>
                             <defs>
                               <linearGradient id="paint0_linear_374_135177" x1="0" x2="0" y1=".5" y2="7.5" gradientUnits="userSpaceOnUse">
@@ -749,30 +761,6 @@
             <button type="button" data-modal-toggle="accountInformationModal2" class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
           </div>
         </form>
-      </div>
-    </div>
-  </div>
-
-  <div id="deleteOrderModal" tabindex="-1" aria-hidden="true" class="fixed left-0 right-0 top-0 z-50 hidden h-modal w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0 md:h-full">
-    <div class="relative h-full w-full max-w-md p-4 md:h-auto">
-      <!-- Modal content -->
-      <div class="relative rounded-lg bg-white p-4 text-center shadow dark:bg-gray-800 sm:p-5">
-        <button type="button" class="absolute right-2.5 top-2.5 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="deleteOrderModal">
-          <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          <span class="sr-only">Close modal</span>
-        </button>
-        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 p-2 dark:bg-gray-700">
-          <svg class="h-8 w-8 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
-          </svg>
-          <span class="sr-only">Danger icon</span>
-        </div>
-        <p class="mb-3.5 text-gray-900 dark:text-white"><a href="#" class="font-medium text-primary-700 hover:underline dark:text-primary-500">@heleneeng</a>, are you sure you want to delete this order from your account?</p>
-        <p class="mb-4 text-gray-500 dark:text-gray-300">This action cannot be undone.</p>
-        <div class="flex items-center justify-center space-x-4">
-          <button data-modal-toggle="deleteOrderModal" type="button" class="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600">No, cancel</button>
-          <button type="submit" class="rounded-lg bg-red-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Yes, delete</button>
-        </div>
       </div>
     </div>
   </div>
