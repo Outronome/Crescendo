@@ -22,14 +22,16 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'bio',
+        'profile_pic',
     ];
 
     public function sendPasswordResetNotification($token)
-{
-    $url = url('/reset-password/' . $token);
+    {
+        $url = url('/reset-password/' . $token);
 
-    $this->notify(new ResetPassword($token));
-}
+        $this->notify(new ResetPassword($token));
+    }
 
     /**
      * The attributes that should be hidden for serialization.

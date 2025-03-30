@@ -34,13 +34,15 @@
 
 <body class="flex flex-col   max-h-screen w-full bg-[#85b2bf]" x-data="{ isSidebarExpanded: false }">
 
-    <header><livewire:layout.topbar></header>
-    
+    <header>
+        <livewire:layout.topbar>
+    </header>
+
     <main class="bg-[#85b2bf]">
         <section class="">
             <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-               
-                <form action="{{ route('login') }}" method="POST" 
+
+                <form action="{{ route('login') }}" method="POST"
                     class="w-full bg-[#649dad] rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">
                     @csrf
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -58,7 +60,7 @@
                                     placeholder="name@company.com" id="email" name="email" value="{{ old('email') }}"
                                     required>
                                 @error('email')
-                                    <span class="error">{{ $message }}</span>
+                                <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div>
@@ -68,7 +70,7 @@
                                     class="bg-[#85b2bf] border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:border-gray-600 dark:placeholder-black  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     required="">
                                 @error('password')
-                                    <span class="error">{{ $message }}</span>
+                                <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="flex items-center justify-between">
@@ -97,7 +99,6 @@
                             </p>
                         </form>
                     </div>
-            </div>
             </div>
         </section>
     </main>
@@ -128,7 +129,9 @@
             for (const flowbitePicker of flowbitePickers) {
                 for (const picker of flowbitePicker.datepickers || [flowbitePicker]) {
                     Object.assign(picker.constructor.locales, locales);
-                    picker.setOptions({ language: "pt" });
+                    picker.setOptions({
+                        language: "pt"
+                    });
                 }
             }
         }, 100);
