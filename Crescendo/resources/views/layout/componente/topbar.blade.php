@@ -1,4 +1,4 @@
-<nav class="fixed w-full top-5 z-50 bg-transparent">
+<nav class="absolute w-full top-5 z-50 bg-transparent">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative">
@@ -10,8 +10,8 @@
         <div class="flex items-center space-x-3">
             <!-- Campo de busca -->
             <div>
-                <input type="text" id="search-navbar" class="w-40 p-2 text-sm text-white shadow rounded-lg bg-[#8bd4cb] 
-                      dark:text-white" placeholder="Search">
+                <input type="text" id="search-navbar" class="w-40 p-2 text-sm text-black shadow rounded-lg bg-white opacity-25
+                      " placeholder="Search">
             </div>
             @if(Auth::check())
                 <!-- Carrinho -->
