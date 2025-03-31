@@ -20,10 +20,14 @@ class Autenticar extends Component
 
     public function autenticar(){
        
-        
+
       $user = User::where('email', $this->email)->first();
+      //dd($user->email_verified_at,$user->email_verified_at === null );
+      if ($user->email_verified_at === null) {
+        session()->flash('error', 'Sua conta ainda não foi verificada. Verifique seu e-mail!');
+        return;
+      }
       if (!$user) {   
-          dd('i am here');
           return redirect()->back()->withErrors(['email' => 'Invalid login credentials']);
       }
       if ($user && Hash::check($this->password, $user->password)) {

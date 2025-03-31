@@ -73,18 +73,18 @@
                                                                  dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
                                 <!-- Ícone de Marketplace -->
                                 <i class="fi fi-br-sign-in-alt pt-1"></i>
-                                <span>Login</span>
+                                <span>Autenticar</span>
                             </a>
 
                         </li>
 
                         <li>
-                            <a href="{{ route('register') }}"
+                            <a href="{{ route('registar') }}"
                                 class="flex items-center space-x-2  py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 
                                                                  dark:text-white dark:hover:bg-[#85b2bf] dark:hover:text-white">
                                 <!-- Ícone de Marketplace -->
                                 <i class="fi fi-br-smile-plus pt-1"></i>
-                                <span>Register</span>
+                                <span>Registar</span>
                             </a>
 
                         </li>

@@ -22,24 +22,25 @@ use Laravel\Fortify\Http\Controllers\VerifyEmailController;
 use Laravel\Fortify\RoutePath;
 
 Route::group(['middleware' => config('fortify.middleware', ['web'])], function () {
-    $enableViews = config('fortify.views', true);
+    $enableViews = config('fortify.views', false);
 
     // Authentication...
-    if ($enableViews) {
+    /*if ($enableViews) {
         Route::get(RoutePath::for('login', '/login'), [AuthenticatedSessionController::class, 'create'])
             ->middleware(['guest:'.config('fortify.guard')])
             ->name('login');
-    }
+    }*/
 
     $limiter = config('fortify.limiters.login');
     $twoFactorLimiter = config('fortify.limiters.two-factor');
     $verificationLimiter = config('fortify.limiters.verification', '6,1');
 
-    Route::post(RoutePath::for('login', '/login'), [AuthenticatedSessionController::class, 'store'])
+    /*Route::post(RoutePath::for('login', '/login'), [AuthenticatedSessionController::class, 'store'])
         ->middleware(array_filter([
             'guest:'.config('fortify.guard'),
             $limiter ? 'throttle:'.$limiter : null,
         ]))->name('login.store');
+    Route::get('/autenticar', \App\Livewire\Pagina\Auth\Autenticar::class)->name('autenticar');*/
 
     Route::post(RoutePath::for('logout', '/logout'), [AuthenticatedSessionController::class, 'destroy'])
         ->middleware([config('fortify.auth_middleware', 'auth').':'.config('fortify.guard')])
@@ -47,6 +48,7 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
 
     // Password Reset...
     if (Features::enabled(Features::resetPasswords())) {
+        /*
         if ($enableViews) {
             Route::get(RoutePath::for('password.request', '/forgot-password'), [PasswordResetLinkController::class, 'create'])
                 ->middleware(['guest:'.config('fortify.guard')])
@@ -63,7 +65,7 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
 
         Route::post(RoutePath::for('password.update', '/reset-password'), [NewPasswordController::class, 'store'])
             ->middleware(['guest:'.config('fortify.guard')])
-            ->name('password.update');
+            ->name('password.update');*/
     }
 
     // Registration...
@@ -87,9 +89,9 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
                 ->name('verification.notice');
         }
 
-        Route::get(RoutePath::for('verification.verify', '/email/verify/{id}/{hash}'), [VerifyEmailController::class, '__invoke'])
+        /*Route::get(RoutePath::for('verification.verify', '/email/verify/{id}/{hash}'), [VerifyEmailController::class, '__invoke'])
             ->middleware([config('fortify.auth_middleware', 'auth').':'.config('fortify.guard'), 'signed', 'throttle:'.$verificationLimiter])
-            ->name('verification.verify');
+            ->name('verification.verify');*/
 
         Route::post(RoutePath::for('verification.send', '/email/verification-notification'), [EmailVerificationNotificationController::class, 'store'])
             ->middleware([config('fortify.auth_middleware', 'auth').':'.config('fortify.guard'), 'throttle:'.$verificationLimiter])

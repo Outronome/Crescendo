@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Gate;
 
 
 Route::get('/', App\Livewire\Pagina\Inicio\Index::class)->name('inicio');
-Route::get('/autenticar',App\Livewire\Pagina\Auth\Autenticar::class)->name('autenticar');
+
 Route::get('/artista', App\Livewire\Pagina\Artista\Index::class)->name('artista')->middleware('verified');
 Route::get('/carrinho', App\Livewire\Pagina\Carrinho\Index::class)->name('carrinho')->middleware('verified');
 Route::get('/checkout', App\Livewire\Pagina\Checkout\Index::class)->name('checkout')->middleware('verified');
@@ -50,3 +50,12 @@ Route::post('/register-artist', [ArtistController::class, 'registerArtist']);
 Route::get('/register-artist', function () {
     return view('auth.register-artist'); // Return the form view
 })->name('register-artist');
+
+#NOVA AUTENTICACAO
+Route::get('/autenticar',App\Livewire\Pagina\Auth\Autenticar::class)->name('login');
+Route::get('/registar',App\Livewire\Pagina\Auth\RegistarUser::class)->name('registar');
+Route::get('/esqueci-me',App\Livewire\Pagina\Auth\Esqueci::class)->name('esqueci');
+Route::get('/reset-password/{token}',App\Livewire\Pagina\Auth\Redefinir::class)->name('password.reset');
+Route::get('/email/verify/{id}/{hash}', App\Livewire\Pagina\Auth\VerificarEmail::class)->name('verification.verify');
+
+

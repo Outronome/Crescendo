@@ -2,6 +2,26 @@
   @section('topbar')
   <livewire:Layout.Topbar />
   @endsection
+  @if(session('error'))
+  <div
+    role="alert"
+    class="bg-red-100 dark:bg-red-900 border-l-4 border-red-500 dark:border-red-700 text-red-900 dark:text-red-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-red-200 dark:hover:bg-red-800 transform hover:scale-105">
+    <svg
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      fill="none"
+      class="h-5 w-5 flex-shrink-0 mr-2 text-red-600"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M13 16h-1v-4h1m0-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        stroke-width="2"
+        stroke-linejoin="round"
+        stroke-linecap="round"></path>
+    </svg>
+    <p class="text-xs font-semibold">{{ session('error') }}</p>
+  </div>
+  
+  @endif
   <form class="w-full bg-[#649dad] rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">
     @csrf
     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -32,18 +52,20 @@
           @enderror
         </div>
         <div class="flex items-center justify-between">
-          
-          <a href="{{ route('password.request') }}"
-            class="text-sm font-medium text-white hover:underline dark:text-primary-500">Forgot
-            password?</a>
+
+          <a href="{{ route('esqueci') }}"
+            class="text-sm font-medium text-white hover:underline dark:text-primary-500">Esqueci
+            a palavra-passe?</a>
         </div>
         <button type="button" wire:click="autenticar"
           class="w-full  text-white bg-[#85b2bf] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign
           in</button>
         <p class="text-sm font-light text-white">
-          Don’t have an account yet? <a href="{{ route('register') }}"
-            class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign
-            up</a>
+          Ainda não tens conta? 
+          <a href="{{ route('registar') }}"
+            class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+            Regista-te!
+          </a>
         </p>
       </form>
     </div>

@@ -4,43 +4,42 @@ namespace App\Livewire\Pagina\Auth;
 
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
-use Illuminate\Foundation\Auth\User;
-use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use App\Notifications\CustomEmailVerification;
 
 class RegistarUser extends Component
 {
     #[Layout('layout.front')]
-    #[Validate('required|min:8|string')]
+    #[Validate('required|string|max:255')]
     public $user_name;
-    #[Validate('required|min:8|email')]
+    
+    #[Validate('required|string|email|max:255|unique:users,email')]
     public $email;
-    #[Validate('required|min:8|string|confirmed:password_confirm')]
+    
+    #[Validate('required|string|min:8|confirmed')]
     public $password;
-    #[Validate('required|min:8|string')]
+    
+    #[Validate('required|string|min:8')]
     public $password_confirmation;
-
+    
     public function registar()
     {
-        //verificar se as palavras passes são iguais e se forem criar o user
         $this->validate();
-        $user = User::where('email', $this->email)->first();
-        if (!$user) {
-            dd('i am here');
-            return redirect()->back()->withErrors(['email' => 'Invalid login credentials']);
-        }
-        if ($user && Hash::check($this->password, $user->password)) {
-            Auth::loginUsingId($user->id);
-            //dependendo das permissões para onde vai o utilizador
-            return redirect('/autenticar');
-        } else {
-            return redirect()->back()->withErrors(['password' => 'Invalid login credentials']);
-        }
+    
+        $user = User::create([
+            'name' => $this->user_name,
+            'email' => $this->email,
+            'password' => Hash::make($this->password),
+        ]);
+        $user->notify(new CustomEmailVerification());
+        //$user->sendEmailVerificationNotification();
+        return redirect()->route('login');
     }
 
     public function render()
     {
-        return view('pagina.auth.autenticar');
+        return view('pagina.auth.registar-user');
     }
 }
