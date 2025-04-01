@@ -1,0 +1,771 @@
+[2025-04-01 17:37:55] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:38:51] local.ERROR: View [pagina.auth.registar-user] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [pagina.auth.registar-user] not found. at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
+[stacktrace]
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('pagina.auth.reg...', Array)
+#1 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(151): Illuminate\\View\\FileViewFinder->find('pagina.auth.reg...')
+#2 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1062): Illuminate\\View\\Factory->make('pagina.auth.reg...', Array, Array)
+#3 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\app\\Livewire\\Pagina\\Auth\\RegistarUser.php(43): view('pagina.auth.reg...')
+#4 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Livewire\\Pagina\\Auth\\RegistarUser->render()
+#5 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Wrapped.php(23): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array)
+#9 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(271): Livewire\\Wrapped->__call('render', Array)
+#10 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(231): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->getView(Object(App\\Livewire\\Pagina\\Auth\\RegistarUser))
+#11 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(54): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Pagina\\Auth\\RegistarUser), '<div></div>')
+#12 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\LivewireManager.php(73): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->mount('App\\\\Livewire\\\\Pa...', Array, NULL)
+#13 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(17): Livewire\\LivewireManager->mount('App\\\\Livewire\\\\Pa...', Array)
+#14 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\SupportPageComponents.php(117): Livewire\\Component->Livewire\\Features\\SupportPageComponents\\{closure}()
+#15 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(14): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::interceptTheRenderOfTheComponentAndRetreiveTheLayoutConfiguration(Object(Closure))
+#16 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): Livewire\\Component->__invoke()
+#17 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Pagina\\Auth\\RegistarUser), '__invoke')
+#18 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#61 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#62 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#64 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\Users\\\\Rafael...')
+#65 {main}
+"} 
+[2025-04-01 17:38:53] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:38:58] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:02] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:06] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:08] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:11] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:14] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:17] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:17] local.ERROR: View [pagina.inicio.index] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [pagina.inicio.index] not found. at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
+[stacktrace]
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('pagina.inicio.i...', Array)
+#1 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(151): Illuminate\\View\\FileViewFinder->find('pagina.inicio.i...')
+#2 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1062): Illuminate\\View\\Factory->make('pagina.inicio.i...', Array, Array)
+#3 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\app\\Livewire\\Pagina\\Inicio\\Index.php(13): view('pagina.inicio.i...')
+#4 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Livewire\\Pagina\\Inicio\\Index->render()
+#5 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Wrapped.php(23): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array)
+#9 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(271): Livewire\\Wrapped->__call('render', Array)
+#10 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(231): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->getView(Object(App\\Livewire\\Pagina\\Inicio\\Index))
+#11 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(54): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Pagina\\Inicio\\Index), '<div></div>')
+#12 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\LivewireManager.php(73): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->mount('App\\\\Livewire\\\\Pa...', Array, NULL)
+#13 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(17): Livewire\\LivewireManager->mount('App\\\\Livewire\\\\Pa...', Array)
+#14 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\SupportPageComponents.php(117): Livewire\\Component->Livewire\\Features\\SupportPageComponents\\{closure}()
+#15 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(14): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::interceptTheRenderOfTheComponentAndRetreiveTheLayoutConfiguration(Object(Closure))
+#16 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): Livewire\\Component->__invoke()
+#17 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Pagina\\Inicio\\Index), '__invoke')
+#18 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#61 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#62 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#64 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\Users\\\\Rafael...')
+#65 {main}
+"} 
+[2025-04-01 17:39:20] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:21] local.ERROR: View [pagina.auth.autenticar] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [pagina.auth.autenticar] not found. at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
+[stacktrace]
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('pagina.auth.aut...', Array)
+#1 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(151): Illuminate\\View\\FileViewFinder->find('pagina.auth.aut...')
+#2 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1062): Illuminate\\View\\Factory->make('pagina.auth.aut...', Array, Array)
+#3 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\app\\Livewire\\Pagina\\Auth\\Autenticar.php(45): view('pagina.auth.aut...')
+#4 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Livewire\\Pagina\\Auth\\Autenticar->render()
+#5 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Wrapped.php(23): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array)
+#9 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(271): Livewire\\Wrapped->__call('render', Array)
+#10 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(231): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->getView(Object(App\\Livewire\\Pagina\\Auth\\Autenticar))
+#11 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(54): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Pagina\\Auth\\Autenticar), '<div></div>')
+#12 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\LivewireManager.php(73): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->mount('App\\\\Livewire\\\\Pa...', Array, NULL)
+#13 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(17): Livewire\\LivewireManager->mount('App\\\\Livewire\\\\Pa...', Array)
+#14 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\SupportPageComponents.php(117): Livewire\\Component->Livewire\\Features\\SupportPageComponents\\{closure}()
+#15 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(14): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::interceptTheRenderOfTheComponentAndRetreiveTheLayoutConfiguration(Object(Closure))
+#16 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): Livewire\\Component->__invoke()
+#17 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Pagina\\Auth\\Autenticar), '__invoke')
+#18 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#61 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#62 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#64 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\Users\\\\Rafael...')
+#65 {main}
+"} 
+[2025-04-01 17:39:24] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:24] local.ERROR: View [pagina.auth.esqueci] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [pagina.auth.esqueci] not found. at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
+[stacktrace]
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('pagina.auth.esq...', Array)
+#1 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(151): Illuminate\\View\\FileViewFinder->find('pagina.auth.esq...')
+#2 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1062): Illuminate\\View\\Factory->make('pagina.auth.esq...', Array, Array)
+#3 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\app\\Livewire\\Pagina\\Auth\\Esqueci.php(29): view('pagina.auth.esq...')
+#4 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Livewire\\Pagina\\Auth\\Esqueci->render()
+#5 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Wrapped.php(23): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array)
+#9 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(271): Livewire\\Wrapped->__call('render', Array)
+#10 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(231): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->getView(Object(App\\Livewire\\Pagina\\Auth\\Esqueci))
+#11 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(54): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Pagina\\Auth\\Esqueci), '<div></div>')
+#12 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\LivewireManager.php(73): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->mount('App\\\\Livewire\\\\Pa...', Array, NULL)
+#13 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(17): Livewire\\LivewireManager->mount('App\\\\Livewire\\\\Pa...', Array)
+#14 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\SupportPageComponents.php(117): Livewire\\Component->Livewire\\Features\\SupportPageComponents\\{closure}()
+#15 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(14): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::interceptTheRenderOfTheComponentAndRetreiveTheLayoutConfiguration(Object(Closure))
+#16 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): Livewire\\Component->__invoke()
+#17 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Pagina\\Auth\\Esqueci), '__invoke')
+#18 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#61 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#62 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#64 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\Users\\\\Rafael...')
+#65 {main}
+"} 
+[2025-04-01 17:39:27] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:27] local.ERROR: View [pagina.inicio.index] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [pagina.inicio.index] not found. at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
+[stacktrace]
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('pagina.inicio.i...', Array)
+#1 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(151): Illuminate\\View\\FileViewFinder->find('pagina.inicio.i...')
+#2 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1062): Illuminate\\View\\Factory->make('pagina.inicio.i...', Array, Array)
+#3 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\app\\Livewire\\Pagina\\Inicio\\Index.php(13): view('pagina.inicio.i...')
+#4 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Livewire\\Pagina\\Inicio\\Index->render()
+#5 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Wrapped.php(23): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array)
+#9 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(271): Livewire\\Wrapped->__call('render', Array)
+#10 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(231): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->getView(Object(App\\Livewire\\Pagina\\Inicio\\Index))
+#11 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(54): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Pagina\\Inicio\\Index), '<div></div>')
+#12 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\LivewireManager.php(73): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->mount('App\\\\Livewire\\\\Pa...', Array, NULL)
+#13 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(17): Livewire\\LivewireManager->mount('App\\\\Livewire\\\\Pa...', Array)
+#14 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\SupportPageComponents.php(117): Livewire\\Component->Livewire\\Features\\SupportPageComponents\\{closure}()
+#15 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(14): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::interceptTheRenderOfTheComponentAndRetreiveTheLayoutConfiguration(Object(Closure))
+#16 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): Livewire\\Component->__invoke()
+#17 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Pagina\\Inicio\\Index), '__invoke')
+#18 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#61 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#62 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#64 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\Users\\\\Rafael...')
+#65 {main}
+"} 
+[2025-04-01 17:39:30] local.ERROR: View [pagina.auth.autenticar] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [pagina.auth.autenticar] not found. at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
+[stacktrace]
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('pagina.auth.aut...', Array)
+#1 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(151): Illuminate\\View\\FileViewFinder->find('pagina.auth.aut...')
+#2 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1062): Illuminate\\View\\Factory->make('pagina.auth.aut...', Array, Array)
+#3 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\app\\Livewire\\Pagina\\Auth\\Autenticar.php(45): view('pagina.auth.aut...')
+#4 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Livewire\\Pagina\\Auth\\Autenticar->render()
+#5 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Wrapped.php(23): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array)
+#9 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(271): Livewire\\Wrapped->__call('render', Array)
+#10 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(231): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->getView(Object(App\\Livewire\\Pagina\\Auth\\Autenticar))
+#11 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(54): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Pagina\\Auth\\Autenticar), '<div></div>')
+#12 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\LivewireManager.php(73): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->mount('App\\\\Livewire\\\\Pa...', Array, NULL)
+#13 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(17): Livewire\\LivewireManager->mount('App\\\\Livewire\\\\Pa...', Array)
+#14 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\SupportPageComponents.php(117): Livewire\\Component->Livewire\\Features\\SupportPageComponents\\{closure}()
+#15 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportPageComponents\\HandlesPageComponents.php(14): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::interceptTheRenderOfTheComponentAndRetreiveTheLayoutConfiguration(Object(Closure))
+#16 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): Livewire\\Component->__invoke()
+#17 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Pagina\\Auth\\Autenticar), '__invoke')
+#18 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#20 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#61 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#62 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#64 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\Users\\\\Rafael...')
+#65 {main}
+"} 
+[2025-04-01 17:39:31] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:36] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:40] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:43] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:45] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:48] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:50] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:39:54] local.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. in C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\symfony\finder\Finder.php:646
+Stack trace:
+#0 C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(588): Symfony\Component\Finder\Finder->in('C:\\Users\\Rafael...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('C:\\Users\\Rafael...')
+#2 Command line code(1): getViews('C:\\Users\\Rafael...', Object(Illuminate\Filesystem\Filesystem))
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. in C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646
+Stack trace:
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(588): Symfony\\Component\\Finder\\Finder->in('C:\\\\Users\\\\Rafael...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('C:\\\\Users\\\\Rafael...')
+#2 Command line code(1): getViews('C:\\\\Users\\\\Rafael...', Object(Illuminate\\Filesystem\\Filesystem))
+#3 {main}
+  thrown at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-01 17:40:00] local.ERROR: The "C:\Users\Rafael Ferraria\Documents\GitHub\Crescendo\Crescendo\resources\views" directory does not exist. {"exception":"[object] (Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException(code: 0): The \"C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\Crescendo\\resources\\views\" directory does not exist. at C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\finder\\Finder.php:646)
+[stacktrace]
+#0 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ViewCacheCommand.php(88): Symfony\\Component\\Finder\\Finder->in(Array)
+#1 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ViewCacheCommand.php(43): Illuminate\\Foundation\\Console\\ViewCacheCommand->bladeFilesIn(Array)
+#2 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Traits\\EnumeratesValues.php(261): Illuminate\\Foundation\\Console\\ViewCacheCommand->Illuminate\\Foundation\\Console\\{closure}('C:\\\\Users\\\\Rafael...', 0)
+#3 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ViewCacheCommand.php(38): Illuminate\\Support\\Collection->each(Object(Closure))
+#4 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewCacheCommand->handle()
+#5 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call(Array)
+#10 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#12 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(68): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\NullOutput))
+#13 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(41): Illuminate\\Console\\Command->runCommand('view:cache', Array, Object(Symfony\\Component\\Console\\Output\\NullOutput))
+#14 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(53): Illuminate\\Console\\Command->callSilent('view:cache', Array)
+#15 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\OptimizeCommand.php(48): Illuminate\\Console\\Command->callSilently('view:cache')
+#16 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(40): Illuminate\\Foundation\\Console\\OptimizeCommand->Illuminate\\Foundation\\Console\\{closure}()
+#17 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Factory.php(60): Illuminate\\Console\\View\\Components\\Task->render('views', Object(Closure))
+#18 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\OptimizeCommand.php(48): Illuminate\\Console\\View\\Components\\Factory->__call('task', Array)
+#19 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Console\\OptimizeCommand->handle()
+#20 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call(Array)
+#25 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\console\\Application.php(1094): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\console\\Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\Users\\Rafael Ferraria\\Documents\\GitHub\\Crescendo\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#33 {main}
+"} 
