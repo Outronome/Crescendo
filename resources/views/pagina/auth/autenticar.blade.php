@@ -20,7 +20,7 @@
     </svg>
     <p class="text-xs font-semibold">{{ session('error') }}</p>
   </div>
-  
+
   @endif
   <form class="w-full bg-[#649dad] rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">
     @csrf
@@ -61,7 +61,7 @@
           class="w-full  text-white bg-[#85b2bf] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign
           in</button>
         <p class="text-sm font-light text-white">
-          Ainda não tens conta? 
+          Ainda não tens conta?
           <a href="{{ route('registar') }}"
             class="font-medium text-primary-600 hover:underline dark:text-primary-500">
             Regista-te!
