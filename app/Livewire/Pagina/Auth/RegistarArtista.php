@@ -8,7 +8,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Hash;
-
+use App\Notifications\CustomEmailVerification;
 
 class RegistarArtista extends Component
 {
@@ -25,7 +25,6 @@ class RegistarArtista extends Component
     public $profile_pic;
     public function registarArtista(){
         // Validação
-        dd($this);  
         $this->validate();
         
         $caminho = $this->photo->store(path: 'photos');
@@ -43,6 +42,7 @@ class RegistarArtista extends Component
         //auth()->login($user);
     
         // Redirecionar para a página inicial
+        $user->notify(new CustomEmailVerification());
         return redirect()->route('login');
 
     }

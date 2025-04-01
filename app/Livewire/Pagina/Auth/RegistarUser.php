@@ -33,9 +33,9 @@ class RegistarUser extends Component
             'email' => $this->email,
             'password' => Hash::make($this->password),
         ]);
+        session()->flash('info', 'Verifique o email introduzido e faça a verificação do email.');
         $user->notify(new CustomEmailVerification());
         //$user->sendEmailVerificationNotification();
-        return redirect()->route('login');
     }
 
     public function render()
