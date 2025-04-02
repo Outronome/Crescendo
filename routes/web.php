@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Gate;
 
 
+
 Route::get('/', App\Livewire\Pagina\Inicio\Index::class)->name('inicio');
+
 
 Route::get('/artista', App\Livewire\Pagina\Artista\Index::class)->name('artista')->middleware('verified');
 Route::get('/carrinho', App\Livewire\Pagina\Carrinho\Index::class)->name('carrinho')->middleware('verified');

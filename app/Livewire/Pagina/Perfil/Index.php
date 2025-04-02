@@ -7,9 +7,18 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    #[Layout('layout.front')] // Ajuste conforme necessário
+    public $showForm = false; // Adiciona a propriedade para controlar a exibição do formulário
+
+    #[Layout('layout.front')]
     public function render()
     {
-        return view('pagina.perfil.index'); // Certifique-se que esta view existe!
+        return view('pagina.perfil.index');
+    }
+
+    // Método para alternar a visibilidade do formulário
+    public function toggleForm()
+    {
+        $this->showForm = !$this->showForm;
     }
 }
+
