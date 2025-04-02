@@ -4,21 +4,22 @@ namespace App\Livewire\Pagina\Perfil;
 
 use Livewire\Attributes\Layout;
 use Livewire\Component;
+use App\Models\Blog;
 
 class Index extends Component
 {
-    public $showForm = false; // Adiciona a propriedade para controlar a exibição do formulário
+    public $showForm = false;
+    public $blogs; // Adiciona a propriedade $blogs
 
     #[Layout('layout.front')]
     public function render()
     {
-        return view('pagina.perfil.index');
+        $this->blogs = Blog::all(); // Busca todos os posts do blog
+        return view('pagina.perfil.index', ['blogs' => $this->blogs]); // Passa os posts para a view
     }
 
-    // Método para alternar a visibilidade do formulário
     public function toggleForm()
     {
         $this->showForm = !$this->showForm;
     }
 }
-
