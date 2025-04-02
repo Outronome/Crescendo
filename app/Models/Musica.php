@@ -4,11 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Musica extends Model
 {
     protected $fillable = [
-        'titulo',
-        'artista_id',
-        'preco',
+        'artist_id',
+        'title',
+        'price',
+        'genero',
+        'file_photo',
+        'file_url',
     ];
 }

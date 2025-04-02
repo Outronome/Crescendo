@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Hash;
 use App\Notifications\CustomEmailVerification;
 
 class RegistarArtista extends Component
+
 {
+    
     use WithFileUploads;   
     #[Validate('required|string|max:255')]
     public $name;

@@ -4,7 +4,7 @@
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative">
         <a href="{{ route('inicio') }}" class="flex items-center space-x-3">
             <img src="/assets/img/Crescendo_symbol.png" class="h-12" alt="Logo"  />
-            <span class="text-2xl font-semibold text-white">Crescendo</span>
+            <span class="text-2xl font-semibold text-black">Crescendo</span>
         </a>
 
         <div class="flex items-center space-x-3">
@@ -17,7 +17,7 @@
                 <!-- Carrinho -->
                 <button onclick="window.location.href='{{ route('carrinho') }}'" class="hidden md:block">
                     <i
-                        class="fi fi-br-cart-shopping-fast text-2xl p-1 pl-2 pr-2 rounded-lg hover:bg-[#85b2bf] text-white"></i>
+                        class="fi fi-br-cart-shopping-fast text-2xl p-1 pl-2 pr-2 rounded-lg hover:bg-[#85b2bf] text-black"></i>
                 </button>
             @endif
 
@@ -27,7 +27,7 @@
                 class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-[#85b2bf] focus:outline-none  dark:text-gray-400  "
                 aria-controls="navbar-hamburger" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
-                <i class="fi fi-br-menu-burger text-2xl text-white  "></i>
+                <i class="fi fi-br-menu-burger text-2xl text-black  "></i>
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M1 1h15M1 7h15M1 13h15" />
                 </svg>

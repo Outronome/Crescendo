@@ -18,7 +18,7 @@ Route::get('/artista', App\Livewire\Pagina\Artista\Index::class)->name('artista'
 Route::get('/carrinho', App\Livewire\Pagina\Carrinho\Index::class)->name('carrinho')->middleware('verified');
 Route::get('/checkout', App\Livewire\Pagina\Checkout\Index::class)->name('checkout')->middleware('verified');
 Route::get('/gestao-user', App\Livewire\Pagina\GestaoUser\Index::class)->name('gestao-user')->middleware('verified');
-Route::get('/market-place', App\Livewire\Pagina\MarketPlace\Index::class)->name('market')->middleware('verified');
+Route::get('/market-place', App\Livewire\Pagina\MarketPlace\Index::class)->name('market');
 Route::get('/whishlist', App\Livewire\Pagina\Whishlist\Index::class)->name('whishlist')->middleware('verified');
 Route::get('/tema', App\Livewire\Pagina\Tema\Index::class)->name('tema')->middleware('verified');
 Route::get('/perfil', App\Livewire\Pagina\Perfil\Index::class)->name('perfil')->middleware('verified');

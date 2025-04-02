@@ -11,11 +11,11 @@
 
     <div class="flex items-center justify-center min-h-screen max-w-screen-xl px-4 py-8 mx-auto  ">
         <div class="mr-auto place-self-center lg:col-span-7 scroll-section transition-all duration-700 ease-in-out transform hover:scale-105" >
-            <h1 class="max-w-2xl mb-4 text-9xl font-extrabold tracking-tight leading-none text-white select-none font-gothic">
+            <h1 class="max-w-2xl mb-4 text-[175px] font-extrabold tracking-tight leading-none text-white select-none font-gothic">
                 Crescendo
             </h1>
-            <p class="max-w-2xl mt-16 text-6xl font-bold text-white m-2 select-none">
-                Amplifying independent artists. Selling music. br Reaching the world.
+            <p class="max-w-3xl mt-16 text-[50px] font-bold text-white m-2 select-none">
+                Amplifying independent artists. <br> Selling music. <br> Reaching the world.
             </p>
         </div>
     </div>
