@@ -212,7 +212,7 @@
           </div>
           
           <div class="hidden p-4 bg-white rounded-lg md:p-4 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
-    <div class="px-6">
+      <div class="px-6">
         <div class="container flex justify-between mx-auto">
             <div class="w-full">
                 <div class="mt-6">
