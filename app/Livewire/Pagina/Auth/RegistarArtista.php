@@ -19,21 +19,26 @@ class RegistarArtista extends Component
     public $email;
     #[Validate('required|string|min:8|confirmed')]
     public $password;
-    #[Validate('nullable|string')]
+    #[Validate('required|string|min:8')]
+    public $password_confirmation;
+    #[Validate('required|string')]
     public $bio;
     #[Validate('image|max:1024')]
     public $profile_pic;
+    public $imageUrl;
     public function registarArtista(){
         // Validação
-        $this->validate();
         
-        $caminho = $this->photo->store(path: 'photos');
+        $this->validate();  
+        $caminho = $this->profile_pic->store('photos', 'public');
+        session()->flash('info', 'Imagem carregada com sucesso!');
+        $this->imageUrl = asset('storage/' . $caminho);
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make($this->password),
             'bio' => $this->bio,
-            'profile_pic' => basename($caminho),
+            'profile_pic' => $caminho,
         ]);
         
     
@@ -42,13 +47,13 @@ class RegistarArtista extends Component
         //auth()->login($user);
     
         // Redirecionar para a página inicial
+        session()->flash('info', 'Verifique o email introduzido e faça a verificação do email.');
         $user->notify(new CustomEmailVerification());
-        return redirect()->route('login');
 
     }
     #[Layout('layout.front')]
     public function render()
     {
-        return view('auth.register-artist');
+        return view('pagina.auth.registar-artista');
     }
 }

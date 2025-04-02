@@ -54,6 +54,8 @@ Route::get('/register-artist', function () {
 #NOVA AUTENTICACAO
 Route::get('/autenticar',App\Livewire\Pagina\Auth\Autenticar::class)->name('login');
 Route::get('/registar',App\Livewire\Pagina\Auth\RegistarUser::class)->name('registar');
+Route::get('/registar-artista',App\Livewire\Pagina\Auth\RegistarArtista::class)->name('registar-artista');
+Route::get('/registar-admin',App\Livewire\Pagina\Auth\RegistarUser::class)->name('registar-admin');
 Route::get('/esqueci-me',App\Livewire\Pagina\Auth\Esqueci::class)->name('esqueci');
 Route::get('/reset-password/{token}',App\Livewire\Pagina\Auth\Redefinir::class)->name('password.reset');
 Route::get('/email/verify/{id}/{hash}', App\Livewire\Pagina\Auth\VerificarEmail::class)->name('verification.verify');

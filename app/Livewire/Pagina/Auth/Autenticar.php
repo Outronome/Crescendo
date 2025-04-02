@@ -37,10 +37,6 @@ class Autenticar extends Component
       }else{
         session()->flash('error', 'Erro no email');
       }
-      
-      
-      
-
   }
 
     public function render()
