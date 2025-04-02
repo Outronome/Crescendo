@@ -56,6 +56,9 @@ class Index extends Component
             $utilizador->save();
         }
     }*/
+    public function criarAdmin(){
+        return redirect()->route("registar-admin");
+    }
     #[Layout('layout.front')]
     public function render()
     {

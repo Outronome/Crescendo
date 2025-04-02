@@ -24,8 +24,8 @@
               <div class="pl-3">
                   <button
                       class="px-3 py-2 text-sm font-medium text-white bg-slate-600 border rounded-md hover:bg-slate-500"
-                      wire:click='aparecerCriacaoPermissao'>
-                      Criar utilizador
+                      wire:click='criarAdmin'>
+                      Criar administrador
                   </button>
               </div>
           </div>
