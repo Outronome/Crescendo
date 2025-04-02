@@ -7,9 +7,9 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    #[Layout('layout.front')]
+    #[Layout('layout.front')] // Ajuste conforme necessário
     public function render()
     {
-        return view('pagina.perfil.index');
+        return view('pagina.perfil.index'); // Certifique-se que esta view existe!
     }
 }

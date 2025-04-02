@@ -19,7 +19,8 @@ Route::get('/gestao-user', App\Livewire\Pagina\GestaoUser\Index::class)->name('g
 Route::get('/market-place', App\Livewire\Pagina\MarketPlace\Index::class)->name('market')->middleware('verified');
 Route::get('/whishlist', App\Livewire\Pagina\Whishlist\Index::class)->name('whishlist')->middleware('verified');
 Route::get('/tema', App\Livewire\Pagina\Tema\Index::class)->name('tema')->middleware('verified');
-Route::get('/perfil', App\Livewire\Pagina\Inicio\Index::class)->name('perfil')->middleware('verified');
+Route::get('/perfil', App\Livewire\Pagina\Perfil\Index::class)->name('perfil')->middleware('verified');
+
 Route::get('/admin/register', function () {
     return view('admin.register');
 })->name('admin.register');
