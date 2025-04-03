@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -21,5 +21,10 @@ class Musica extends Model
     public function artist(): HasMany{
         //return $this->hasMany(User::class);
         return $this->hasMany(User::class, 'id', 'artista_id');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'wishlists', 'musica_id', 'user_id')->withTimestamps();
     }
 }

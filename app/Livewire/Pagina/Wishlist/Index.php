@@ -7,18 +7,16 @@ use Livewire\Component;
 use App\Models\Wishlist;
 use App\Models\Musica;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class Index extends Component
 {
     public $wishlist;
 
-    public function mount()
+     public function mount()
     {
-        if (Auth::check()) {
-            $this->wishlist = Wishlist::where('user_id', Auth::id())->pluck('musica_id')->toArray();
-        } else {
-            $this->wishlist = session()->get('wishlist', []);
-        }
+        // Assuming you want to get the musics from the authenticated user
+        $this->musicas = auth()->user()->wishlist;  // Access the relationship to get the musics
     }
 
     public function toggleWishlist($musicaId)
@@ -43,10 +41,22 @@ class Index extends Component
         }
     }
 
+    public function removeFromWishlist($musicaId)
+{
+  
+    $user = auth()->user();
+
+    
+    $user->wishlist()->detach($musicaId);
+
+   
+    $this->musicas = $user->wishlist;
+}
+
     #[Layout('layout.front')]
     public function render()
     {
-        $musicas = Musica::all();
+        $musicas = auth()->user()->wishlist;
         return view('pagina.wishlist.index',compact('musicas'));
     }
 }
