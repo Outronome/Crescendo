@@ -32,7 +32,7 @@ class Index extends Component
     public function editarMusica()
     {
         $this->modal = true;
-        $this->criar = false;
+        
     }
 
     public function abrirCriarMusica()
@@ -40,10 +40,17 @@ class Index extends Component
         $this->criar = true;
     }
     #[On('fecharModalNewMusic')]
-    #[On('fecharModalEditMusic')]
-    public function fecharPopUp()
+    
+    public function fecharPopUpNew()
     {
         $this->criar = false;
+    }
+
+    #[On('EditMusic')]
+    public function XPTO()
+    {
+        dd();
+        $this->modal = false;
     }
 
     #[Layout('layout.front')]

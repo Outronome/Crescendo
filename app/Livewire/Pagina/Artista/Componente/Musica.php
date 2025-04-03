@@ -52,7 +52,6 @@ class Musica extends Component
 
     }
     
-
     public function render()
     {
         return view('pagina.artista.componente.musica');

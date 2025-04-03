@@ -44,7 +44,13 @@
                                 {{ $musica->price ? 'R$ ' . number_format($musica->price, 2, ',', '.') : 'Gratuito' }}
                             </td>
                             <td class="flex px-4 py-3 text-right items-center justify-end space-x-2">
-                                <button class="px-3 py-1 text-sm font-bold text-blue-500 bg-transparent border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white" wire:click='editarMusica({{ $musica->id }})'>Editar</button>
+                                
+                                <button class="px-3 py-1 text-sm font-bold text-blue-500 bg-transparent border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white" wire:click='editarMusica'>Editar</button>
+                               @if ($modal)
+                               <livewire:pagina.artista.componente.FormEditMusic :musicaId="$musica->id"  >
+                               @endif
+
+
                                 <button class="px-4 py-2 text-sm font-semibold text-white bg-red-600 hover:bg-red-700 rounded ml-2" onclick="confirm('Are you sure you want to delete this music?') || event.stopImmediatePropagation()" wire:click="deleteMusica({{ $musica->id }})">
                                     Delete
                                 </button>

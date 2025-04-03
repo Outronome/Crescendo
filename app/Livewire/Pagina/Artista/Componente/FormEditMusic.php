@@ -20,41 +20,59 @@ class FormEditMusic extends Component
     #[Validate('required|string')]
     public $tema;
     #[Validate('required|file|mimes:mp3,wav,ogg|max:10240')]
-    public $musica;
-    #[Validate('required|file|mimes:jpg,png,webp|max:10240')]
-    public $foto_capa_music;
+    public $file_url;
+    
 
     public $musicaId;
-    
-    public $novoTitulo;
 
-    
+    public $musicaAnt;
 
-    public function fecharPopUp()
+    public $musica;
+
+    public function mount($musicaId)
     {
-        $this->dispatch('fecharModalEditMusic');
+
+        $this->musicaId = $musicaId;
+        $this->musica = Musica::find($musicaId); // Corrigido: acessar diretamente $musicaId
+        $this->musicaAnt = $this->musica;
+        if ($this->musica) {
+            $this->titulo = $this->musica->title;
+            $this->preco = $this->musica->price;
+            $this->tema = $this->musica->genero;
+            $this->file_url = $this->musica->file_url;
+            
+        }
     }
-    
+
+    public function fecharPopUpEdit()
+    {
+        $this->dispatch('EditMusic');
+    }
     public function editarMusica()
     {
+        $this->validate();
 
-        $validatedData = $this->validate();
+        $caminho = $this->file_url->store('musicas', 'public');
+        //$fotoCapa = $this->foto_capa_music->store('photos', 'public');
 
         
-        $musica = Musica::find($this->musicaId); // Buscar música pelo ID
-        
-        
-        
-            $musica->artist_id = Auth::id();
-            $musica->title = $this->novoTitulo;
-            $musica->price = $this->preco;
-            $musica->genero = $this->tema;
-            $musica->save(); // Save the changes
 
-            $this->reset(['titulo', 'preco', 'tema', 'musica', 'foto_capa_music']);
-            $this->dispatch('fecharModalEditMusic');
+        $this->musica->artist_id = Auth::id();
+        $this->musica->title = $this->titulo;
+        $this->musica->price = $this->preco;
+        $this->musica->genero = $this->tema;
+        //$this->musica->foto_capa_music = $fotoCapa;
+        $this->musica->file_url = $caminho;
+        $this->musica->save(); // Save the changes
+
+
         
+        $this->dispatch('EditMusic');
+
     }
+
+
+
 
     public function render()
     {
