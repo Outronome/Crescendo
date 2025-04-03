@@ -471,9 +471,9 @@
   
   @endif
 
-</section>
+
     <Livewire:Pagina.Artista.Componente.FormNewMusic>
-@endif
+
     <button type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2">
       ahjhjhjh
     </button>
