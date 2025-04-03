@@ -13,6 +13,7 @@ class Musica extends Model
         'price',
         'genero',
         'file_photo',
+        'active',
         'file_url',
     ];
 }
