@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 use \App\Models\Carrinho; 
+use \App\Models\Wishlist; 
 use App\Notifications\CustomEmailVerification;
 
 class RegistarUser extends Component
@@ -35,6 +36,9 @@ class RegistarUser extends Component
             'password' => Hash::make($this->password),
         ]);
         Carrinho::create([
+            'user_id' => $user->id,
+        ]);
+        Wishlist::create([
             'user_id' => $user->id,
         ]);
 

@@ -51,8 +51,6 @@ class RegistarArtista extends Component
             'user_id' => $user->id,
         ]);
         
-    
-    
         // Fazer login do usuário automaticamente
         //auth()->login($user);
     
