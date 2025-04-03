@@ -8,24 +8,25 @@ class Index extends Component
 {
     public $musicas;
 
-    public function mount()
-    {
-        $this->musicas = Musica::all();
-    }
 
     public function toggleActive($id)
     {
         $musica = Musica::findOrFail($id);
         $musica->active = !$musica->active;
         $musica->save();
+    }
 
-        // Refresh the list
-        $this->musicas = Musica::all();
+    public function deleteMusica($id)
+    {
+        $musica = Musica::findOrFail($id);
+        $musica->delete();
+
     }
 
     #[Layout('layout.front')]
     public function render()
     {
+        $this->musicas = Musica::with('artist')->get();
         return view('pagina.gestao-musica.index');
     }
 }
