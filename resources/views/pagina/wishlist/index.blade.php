@@ -2,9 +2,9 @@
     @section('topbar')
     <livewire:Layout.Topbar />
     @endsection
-    <div class="mx-auto grid grid-cols-4 max-w-screen-xl px-4 2xl:px-0">
+    <div class="mx-auto gap-4 grid grid-cols-4 max-w-screen-xl px-4 2xl:px-0">
         @forelse ($musicas as $musica)
-        <div class="mb-4">
+        <div class="mb-4" >
             <div class="rounded-lg border border-gray-200 bg-[#85b2bf] p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                 <div class="h-56 w-full">
                     <a href="#" class="shrink-0 md:order-1">
