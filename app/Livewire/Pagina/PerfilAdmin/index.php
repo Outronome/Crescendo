@@ -15,12 +15,18 @@ class Index extends Component
     public $showForm = false; // Adiciona a propriedade para controlar a exibição do formulário
     #[Validate('required|string|max:255')]
     public $name;
-    #[Validate('required|string|email|max:255|unique:users,email')]
+    
     public $email;
     #[Validate('nullable|confirmed|min:8')]
     public $password;
+
+    public $password_confirmation;
     
     public function mount(){
+        
+        if( Auth::user()==null)
+        return redirect()->route('login');
+
       $this->name = Auth::user()->name;
       $this->email = Auth::user()->email;
     }
@@ -35,22 +41,30 @@ class Index extends Component
     }
     public function update(){
         // Validate the incoming request
-        $this->validate();
+        $validatedData = $this->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . Auth::id(), // Exclude current user's email from uniqueness check
+            'password' => 'nullable|min:8|confirmed',
+            'password_confirmation' => 'nullable|min:8',
+        ]);
 
-        // Update the user information
-        $user = User::where('id', Auth::id())->first();
+        // Proceed to save user data after successful validation
+        $user = User::find(Auth::id());
         $user->name = $this->name;
         $user->email = $this->email;
 
-        // If a password is provided, update it
-        if ($this->password!=null) {
+        // If password is provided, hash and update it
+        if ($this->password) {
             $user->password = Hash::make($this->password);
         }
 
         $user->save();
 
-        // Redirect back with a success message
-        return redirect()->route('admin.profile')->with('success', 'Profile updated successfully');
+        // Success message
+        session()->flash('message', 'Profile updated successfully');
+        
+        // Redirect or reload page
+        return redirect()->route('perfil.admin');
     }
     // Método para alternar a visibilidade do formulário
     public function toggleForm()
