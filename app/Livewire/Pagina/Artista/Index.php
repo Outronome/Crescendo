@@ -26,15 +26,26 @@ class Index extends Component
     public $foto_capa_music;
 
     public $criar = false;
+
+    public $modal = false;
+
+    public function editarMusica()
+    {
+        $this->modal = true;
+        $this->criar = false;
+    }
+
     public function abrirCriarMusica()
     {
         $this->criar = true;
     }
     #[On('fecharModalNewMusic')]
-    public function fecharPopUp(){
+    #[On('fecharModalEditMusic')]
+    public function fecharPopUp()
+    {
         $this->criar = false;
     }
-    
+
     #[Layout('layout.front')]
     public function render()
     {

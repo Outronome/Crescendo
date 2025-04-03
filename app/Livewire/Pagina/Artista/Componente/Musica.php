@@ -51,6 +51,8 @@ class Musica extends Component
         $this->dispatch('fecharModalNewMusic');
 
     }
+    
+
     public function render()
     {
         return view('pagina.artista.componente.musica');

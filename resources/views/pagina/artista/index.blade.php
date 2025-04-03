@@ -1,6 +1,6 @@
 <section class="py-8 antialiased md:py-8">
   @section('topbar')
-  <livewire:Layout.Topbar />
+    <livewire:Layout.Topbar />
   @endsection
   <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
 
@@ -217,313 +217,332 @@
           <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel"
             aria-labelledby="stats-tab">
             @for ($i = 0, $j = 5; $i < $j; $i++)
-              <livewire:Pagina.Artista.Componente.Musica>
-              @endfor
+        <livewire:Pagina.Artista.Componente.Musica>
+        @endfor
           </div>
-          <div class="hidden p-4 bg-white rounded-lg md:p-4 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
-      <div class="px-6">
-        <div class="container flex justify-between mx-auto">
-            <div class="w-full">
-                <div class="mt-6">
+          <div class="hidden p-4 bg-white rounded-lg md:p-4 dark:bg-gray-800" id="about" role="tabpanel"
+            aria-labelledby="about-tab">
+            <div class="px-6">
+              <div class="container flex justify-between mx-auto">
+                <div class="w-full">
+                  <div class="mt-6">
                     <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
-                        <div class="flex items-center justify-between">
-                            <span class="font-light text-gray-600">1 de junho de 2020</span>
-                            <button id="editPostButton" class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">Editar</button>
+                      <div class="flex items-center justify-between">
+                        <span class="font-light text-gray-600">1 de junho de 2020</span>
+                        <button id="editPostButton"
+                          class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">Editar</button>
+                      </div>
+                      <div class="mt-2">
+                        <h2 class="text-2xl font-bold text-gray-700 hover:underline">Crie sua nova ideia com o Laravel
+                          Framework.</h2>
+                        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
+                          expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi,
+                          accusamus delectus nihil quis facere in modi ratione libero!</p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4">
+                        <button id="addCommentButton" class="text-blue-500 hover:underline">Adicionar
+                          Comentário</button>
+                        <div>
+                          <a href="#" class="flex items-center">
+                            <img
+                              src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80"
+                              alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                            <h1 class="font-bold text-gray-700 hover:underline">Alex John</h1>
+                          </a>
                         </div>
-                        <div class="mt-2">
-                            <h2 class="text-2xl font-bold text-gray-700 hover:underline">Crie sua nova ideia com o Laravel Framework.</h2>
-                            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
-                        </div>
-                        <div class="flex items-center justify-between mt-4">
-                            <button id="addCommentButton" class="text-blue-500 hover:underline">Adicionar Comentário</button>
-                            <div>
-                                <a href="#" class="flex items-center">
-                                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80" alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
-                                    <h1 class="font-bold text-gray-700 hover:underline">Alex John</h1>
-                                </a></div>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div id="editPostModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black bg-opacity-50">
-    <div class="flex items-center justify-center min-h-screen">
-        <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
-            <h2 class="text-2xl font-bold mb-4">Editar Post</h2>
-            <form id="editPostForm">
-                <div class="mb-4">
-                    <label for="postTitle" class="block text-gray-700 text-sm font-bold mb-2">Título</label>
-                    <input type="text" id="postTitle" name="title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="Crie sua nova ideia com o Laravel Framework.">
-                </div>
-                <div class="mb-6">
-                    <label for="postDescription" class="block text-gray-700 text-sm font-bold mb-2">Descrição</label>
-                    <textarea id="postDescription" name="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</textarea>
-                </div>
-                <div class="flex items-center justify-between">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Salvar</button>
-                    <button type="button" id="cancelEdit" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancelar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<div id="addCommentModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black bg-opacity-50">
-    <div class="flex items-center justify-center min-h-screen">
-        <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
-            <h2 class="text-2xl font-bold mb-4">Adicionar Comentário</h2>
-            <form id="addCommentForm">
-                <div class="mb-6">
-                    <label for="commentText" class="block text-gray-700 text-sm font-bold mb-2">Escreva um comentário</label>
-                    <textarea id="commentText" name="comment" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-                <div class="flex items-center justify-between">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Postar</button>
-                    <button type="button" id="cancelComment" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancelar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-
-                      <a href="#"
-                        class="px-3 py-2 mx-1 font-medium text-gray-500 bg-white rounded-md cursor-not-allowed">
-                        previous
-                      </a>
-
-                      <a href="#"
-                        class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
-                        1
-                      </a>
-
-                      <a href="#"
-                        class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
-                        2
-                      </a>
-
-                      <a href="#"
-                        class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
-                        3
-                      </a>
-
-                      <a href="#"
-                        class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
-                        Next
-                      </a>
+                    <div class="flex items-center justify-center min-h-screen">
+                      <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
+                        <h2 class="text-2xl font-bold mb-4">Editar Post</h2>
+                        <form id="editPostForm">
+                          <div class="mb-4">
+                            <label for="postTitle" class="block text-gray-700 text-sm font-bold mb-2">Título</label>
+                            <input type="text" id="postTitle" name="title"
+                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                              value="Crie sua nova ideia com o Laravel Framework.">
+                          </div>
+                          <div class="mb-6">
+                            <label for="postDescription"
+                              class="block text-gray-700 text-sm font-bold mb-2">Descrição</label>
+                            <textarea id="postDescription" name="description"
+                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</textarea>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <button type="submit"
+                              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Salvar</button>
+                            <button type="button" id="cancelEdit"
+                              class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancelar</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
+
+                  <div id="addCommentModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black bg-opacity-50">
+                    <div class="flex items-center justify-center min-h-screen">
+                      <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
+                        <h2 class="text-2xl font-bold mb-4">Adicionar Comentário</h2>
+                        <form id="addCommentForm">
+                          <div class="mb-6">
+                            <label for="commentText" class="block text-gray-700 text-sm font-bold mb-2">Escreva um
+                              comentário</label>
+                            <textarea id="commentText" name="comment"
+                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <button type="submit"
+                              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Postar</button>
+                            <button type="button" id="cancelComment"
+                              class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancelar</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <a href="#" class="px-3 py-2 mx-1 font-medium text-gray-500 bg-white rounded-md cursor-not-allowed">
+                    previous
+                  </a>
+
+                  <a href="#"
+                    class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                    1
+                  </a>
+
+                  <a href="#"
+                    class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                    2
+                  </a>
+
+                  <a href="#"
+                    class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                    3
+                  </a>
+
+                  <a href="#"
+                    class="px-3 py-2 mx-1 font-medium text-gray-700 bg-white rounded-md hover:bg-blue-500 hover:text-white">
+                    Next
+                  </a>
                 </div>
-
               </div>
             </div>
+
           </div>
-          <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel"
-            aria-labelledby="faq-tab">
-            <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:p-8">
-              <h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">Latest orders</h3>
-              <div
-                class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 pb-4 dark:border-gray-700 md:pb-5">
-                <dl class="w-1/2 sm:w-48">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                    <a href="#" class="hover:underline">#FWB12546798</a>
-                  </dd>
-                </dl>
+        </div>
+      </div>
+      <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:p-8">
+          <h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">Latest orders</h3>
+          <div class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 pb-4 dark:border-gray-700 md:pb-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546798</a>
+              </dd>
+            </dl>
 
-                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.12.2023</dd>
-                </dl>
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.12.2023</dd>
+            </dl>
 
-                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$499</dd>
-                </dl>
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$499</dd>
+            </dl>
 
-                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                  <dd
-                    class="me-2 mt-1.5 inline-flex shrink-0 items-center rounded bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
-                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z">
-                      </path>
-                    </svg>
-                    Em negociação
-                  </dd>
-                </dl>
-
-
-              </div>
-              <div
-                class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
-                <dl class="w-1/2 sm:w-48">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                    <a href="#" class="hover:underline">#FWB12546777</a>
-                  </dd>
-                </dl>
-
-                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">10.11.2024</dd>
-                </dl>
-
-                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$3,287</dd>
-                </dl>
-
-                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                  <dd
-                    class="mt-1.5 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
-                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M6 18 17.94 6M18 18 6.06 6"></path>
-                    </svg>
-                    Cancelled
-                  </dd>
-                </dl>
-              </div>
-              <div
-                class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
-                <dl class="w-1/2 sm:w-48">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                    <a href="#" class="hover:underline">#FWB12546846</a>
-                  </dd>
-                </dl>
-
-                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">07.11.2024</dd>
-                </dl>
-
-                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$111</dd>
-                </dl>
-
-                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                  <dd
-                    class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 11.917 9.724 16.5 19 7.5"></path>
-                    </svg>
-                    Completed
-                  </dd>
-                </dl>
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="me-2 mt-1.5 inline-flex shrink-0 items-center rounded bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z">
+                  </path>
+                </svg>
+                Em negociação
+              </dd>
+            </dl>
 
 
-              </div>
-              <div class="flex flex-wrap items-center gap-y-4 pt-4 md:pt-5">
-                <dl class="w-1/2 sm:w-48">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                    <a href="#" class="hover:underline">#FWB12546212</a>
-                  </dd>
-                </dl>
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546777</a>
+              </dd>
+            </dl>
 
-                <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">18.10.2024</dd>
-                </dl>
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">10.11.2024</dd>
+            </dl>
 
-                <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                  <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$756</dd>
-                </dl>
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$3,287</dd>
+            </dl>
 
-                <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                  <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                  <dd
-                    class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                    <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                      height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 11.917 9.724 16.5 19 7.5"></path>
-                    </svg>
-                    Completed
-                  </dd>
-                </dl>
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="mt-1.5 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18 17.94 6M18 18 6.06 6"></path>
+                </svg>
+                Cancelled
+              </dd>
+            </dl>
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546846</a>
+              </dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">07.11.2024</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$111</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 11.917 9.724 16.5 19 7.5"></path>
+                </svg>
+                Completed
+              </dd>
+            </dl>
 
 
-              </div>
-            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-y-4 pt-4 md:pt-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546212</a>
+              </dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">18.10.2024</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$756</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 11.917 9.724 16.5 19 7.5"></path>
+                </svg>
+                Completed
+              </dd>
+            </dl>
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
+  </div>
 
   <button type="button" wire:click="abrirCriarMusica">
-    ahjhjhjhaaaaaaaaaaa
+    Adicionar Musica
+  </button>
+  <button type="button" wire:click="editarMusica">
+   Editar Musica
   </button>
 
   @if ($criar)
     <livewire:Pagina.Artista.Componente.FormNewMusic>
-  
-  @endif
 
-</section>
-    <Livewire:Pagina.Artista.Componente.FormNewMusic>
 @endif
-    <button type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2">
-      ahjhjhjh
-    </button>
+@if ($modal)
+    <livewire:Pagina.Artista.Componente.FormEditMusic>
+
+@endif
+
+
+  
 </section>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Modal de Edição
-        const editPostButton = document.getElementById('editPostButton');
-        const editPostModal = document.getElementById('editPostModal');
-        const cancelEditButton = document.getElementById('cancelEdit');
-        const editPostForm = document.getElementById('editPostForm');
-        const postTitle = document.querySelector('.text-2xl.font-bold');
-        const postDescription = document.querySelector('.mt-2.text-gray-600');
+  document.addEventListener('DOMContentLoaded', function () {
+    // Modal de Edição
+    const editPostButton = document.getElementById('editPostButton');
+    const editPostModal = document.getElementById('editPostModal');
+    const cancelEditButton = document.getElementById('cancelEdit');
+    const editPostForm = document.getElementById('editPostForm');
+    const postTitle = document.querySelector('.text-2xl.font-bold');
+    const postDescription = document.querySelector('.mt-2.text-gray-600');
 
-        editPostButton.addEventListener('click', function() {
-            editPostModal.classList.remove('hidden');
-        });
-
-        cancelEditButton.addEventListener('click', function() {
-            editPostModal.classList.add('hidden');
-        });
-
-        editPostForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            postTitle.textContent = document.getElementById('postTitle').value;
-            postDescription.textContent = document.getElementById('postDescription').value;
-
-            editPostModal.classList.add('hidden');
-        });
-
-        // Modal de Adicionar Comentário
-        const addCommentButton = document.getElementById('addCommentButton');
-        const addCommentModal = document.getElementById('addCommentModal');
-        const cancelCommentButton = document.getElementById('cancelComment');
-        const addCommentForm = document.getElementById('addCommentForm');
-
-        addCommentButton.addEventListener('click', function() {
-            addCommentModal.classList.remove('hidden');
-        });
-
-        cancelCommentButton.addEventListener('click', function() {
-            addCommentModal.classList.add('hidden');
-        });
-
-        addCommentForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Aqui você pode adicionar a lógica para enviar o comentário para o servidor
-            addCommentModal.classList.add('hidden');
-        });
+    editPostButton.addEventListener('click', function () {
+      editPostModal.classList.remove('hidden');
     });
+
+    cancelEditButton.addEventListener('click', function () {
+      editPostModal.classList.add('hidden');
+    });
+
+    editPostForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      postTitle.textContent = document.getElementById('postTitle').value;
+      postDescription.textContent = document.getElementById('postDescription').value;
+
+      editPostModal.classList.add('hidden');
+    });
+
+    // Modal de Adicionar Comentário
+    const addCommentButton = document.getElementById('addCommentButton');
+    const addCommentModal = document.getElementById('addCommentModal');
+    const cancelCommentButton = document.getElementById('cancelComment');
+    const addCommentForm = document.getElementById('addCommentForm');
+
+    addCommentButton.addEventListener('click', function () {
+      addCommentModal.classList.remove('hidden');
+    });
+
+    cancelCommentButton.addEventListener('click', function () {
+      addCommentModal.classList.add('hidden');
+    });
+
+    addCommentForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Aqui você pode adicionar a lógica para enviar o comentário para o servidor
+      addCommentModal.classList.add('hidden');
+    });
+  });
 </script>
