@@ -6,8 +6,6 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use \App\Models\Carrinho; 
-use \App\Models\Wishlist; 
 use Livewire\Component;
 use App\Notifications\CustomEmailVerification;
 
@@ -34,12 +32,6 @@ class RegistarAdmin extends Component
             'name' => $this->user_name,
             'email' => $this->email,
             'password' => Hash::make($this->password),
-        ]);
-        Carrinho::create([
-            'user_id' => $user->id,
-        ]);
-        Wishlist::create([
-            'user_id' => $user->id,
         ]);
         session()->flash('info', 'Verifique o email introduzido e faça a verificação do email.');
         $user->notify(new CustomEmailVerification());

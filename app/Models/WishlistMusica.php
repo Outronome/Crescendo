@@ -4,9 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Wishlist extends Model
+class WishlistMusica extends Model
 {
     protected $fillable = [
-        'user_id',
+        'wishlist_id',
+        'musica_id',
     ];
 }

@@ -59,7 +59,7 @@
                             <span>Profile</span></a>
                     </li>
                     <li>
-                        <a href=" {{ route('wishlist') }}"
+                        <a href=" {{ route('whishlist') }}"
                             class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
                                 class="fi fi-br-heart pt-1"></i>
                             <span>Wishlist</span>
