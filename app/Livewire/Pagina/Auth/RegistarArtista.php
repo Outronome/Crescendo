@@ -7,6 +7,8 @@ use Livewire\Attributes\Layout;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
+use \App\Models\Carrinho; 
+use \App\Models\Wishlist; 
 use Illuminate\Support\Facades\Hash;
 use App\Notifications\CustomEmailVerification;
 
@@ -41,6 +43,12 @@ class RegistarArtista extends Component
             'password' => Hash::make($this->password),
             'bio' => $this->bio,
             'profile_pic' => $caminho,
+        ]);
+        Carrinho::create([
+            'user_id' => $user->id,
+        ]);
+        Wishlist::create([
+            'user_id' => $user->id,
         ]);
         
     
