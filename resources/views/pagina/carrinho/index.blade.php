@@ -43,7 +43,7 @@
                     {{-- Preço unitário ou total --}}
                     <div class="text-end ml-4">
                         <p class="text-base font-bold text-gray-900 dark:text-white">
-                            €{{ number_format($musica->preco * $item->quantidade, 2, ',', '.') }}
+                            €{{ number_format($musica->price * $item->quantidade, 2, ',', '.') }}
                         </p>
                     </div>
                 </div>
