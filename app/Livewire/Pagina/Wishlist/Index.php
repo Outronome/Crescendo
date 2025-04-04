@@ -12,6 +12,7 @@ use App\Models\User;
 class Index extends Component
 {
     public $wishlist;
+    
 
      public function mount()
     {
@@ -40,6 +41,10 @@ class Index extends Component
             $this->wishlist = $wishlist;
         }
     }
+
+
+
+
 
     public function removeFromWishlist($musicaId)
 {
