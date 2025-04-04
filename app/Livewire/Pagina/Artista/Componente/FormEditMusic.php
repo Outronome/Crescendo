@@ -21,7 +21,7 @@ class FormEditMusic extends Component
     public $tema;
     #[Validate('required|file|mimes:mp3,wav,ogg|max:10240')]
     public $file_url;
-    
+
 
     public $musicaId;
 
@@ -40,7 +40,7 @@ class FormEditMusic extends Component
             $this->preco = $this->musica->price;
             $this->tema = $this->musica->genero;
             $this->file_url = $this->musica->file_url;
-            
+
         }
     }
 
@@ -55,7 +55,7 @@ class FormEditMusic extends Component
         $caminho = $this->file_url->store('musicas', 'public');
         //$fotoCapa = $this->foto_capa_music->store('photos', 'public');
 
-        
+
 
         $this->musica->artist_id = Auth::id();
         $this->musica->title = $this->titulo;
@@ -66,7 +66,7 @@ class FormEditMusic extends Component
         $this->musica->save(); // Save the changes
 
 
-        
+
         $this->dispatch('EditMusic');
 
     }

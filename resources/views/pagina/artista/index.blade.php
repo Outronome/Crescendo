@@ -1,4 +1,4 @@
-<div>
+<>
   <section class="py-8 antialiased md:py-8">
     @section('topbar')
     <livewire:Layout.Topbar />
@@ -223,150 +223,163 @@
             </div>
             <div class="hidden p-4 bg-white rounded-lg md:p-4 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
               <livewire:blog />
-              </div>
-
             </div>
+
           </div>
         </div>
-        <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel"
-          aria-labelledby="faq-tab">
-          <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:p-8">
-            <h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">Latest orders</h3>
-            <div
-              class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 pb-4 dark:border-gray-700 md:pb-5">
-              <dl class="w-1/2 sm:w-48">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                  <a href="#" class="hover:underline">#FWB12546798</a>
-                </dd>
-              </dl>
+      </div>
+      <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel"
+        aria-labelledby="faq-tab">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:p-8">
+          <h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">Latest orders</h3>
+          <div
+            class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 pb-4 dark:border-gray-700 md:pb-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546798</a>
+              </dd>
+            </dl>
 
-              <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.12.2023</dd>
-              </dl>
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.12.2023</dd>
+            </dl>
 
-              <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$499</dd>
-              </dl>
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$499</dd>
+            </dl>
 
-              <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                <dd
-                  class="me-2 mt-1.5 inline-flex shrink-0 items-center rounded bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
-                  <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z">
-                    </path>
-                  </svg>
-                  Em negociação
-                </dd>
-              </dl>
-
-
-            </div>
-            <div
-              class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
-              <dl class="w-1/2 sm:w-48">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                  <a href="#" class="hover:underline">#FWB12546777</a>
-                </dd>
-              </dl>
-
-              <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">10.11.2024</dd>
-              </dl>
-
-              <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$3,287</dd>
-              </dl>
-
-              <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                <dd
-                  class="mt-1.5 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
-                  <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M6 18 17.94 6M18 18 6.06 6"></path>
-                  </svg>
-                  Cancelled
-                </dd>
-              </dl>
-            </div>
-            <div
-              class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
-              <dl class="w-1/2 sm:w-48">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                  <a href="#" class="hover:underline">#FWB12546846</a>
-                </dd>
-              </dl>
-
-              <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">07.11.2024</dd>
-              </dl>
-
-              <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$111</dd>
-              </dl>
-
-              <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                <dd
-                  class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                  <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M5 11.917 9.724 16.5 19 7.5"></path>
-                  </svg>
-                  Completed
-                </dd>
-              </dl>
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="me-2 mt-1.5 inline-flex shrink-0 items-center rounded bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z">
+                  </path>
+                </svg>
+                Em negociação
+              </dd>
+            </dl>
 
 
-            </div>
-            <div class="flex flex-wrap items-center gap-y-4 pt-4 md:pt-5">
-              <dl class="w-1/2 sm:w-48">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
-                  <a href="#" class="hover:underline">#FWB12546212</a>
-                </dd>
-              </dl>
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546777</a>
+              </dd>
+            </dl>
 
-              <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">18.10.2024</dd>
-              </dl>
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">10.11.2024</dd>
+            </dl>
 
-              <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$756</dd>
-              </dl>
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$3,287</dd>
+            </dl>
 
-              <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
-                <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                <dd
-                  class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-                  <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M5 11.917 9.724 16.5 19 7.5"></path>
-                  </svg>
-                  Completed
-                </dd>
-              </dl>
-            </div>
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="mt-1.5 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18 17.94 6M18 18 6.06 6"></path>
+                </svg>
+                Cancelled
+              </dd>
+            </dl>
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-y-4 border-b border-gray-200 py-4 pb-4 dark:border-gray-700 md:py-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546846</a>
+              </dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">07.11.2024</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$111</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 11.917 9.724 16.5 19 7.5"></path>
+                </svg>
+                Completed
+              </dd>
+            </dl>
+
+
+          </div>
+          <div class="flex flex-wrap items-center gap-y-4 pt-4 md:pt-5">
+            <dl class="w-1/2 sm:w-48">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <a href="#" class="hover:underline">#FWB12546212</a>
+              </dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">18.10.2024</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/5 md:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
+              <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$756</dd>
+            </dl>
+
+            <dl class="w-1/2 sm:w-1/4 sm:flex-1 lg:w-auto">
+              <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
+              <dd
+                class="mt-1.5 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+                <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 11.917 9.724 16.5 19 7.5"></path>
+                </svg>
+                Completed
+              </dd>
+            </dl>
           </div>
         </div>
       </div>
     </div>
-</div>
+    <button type="button" wire:click="abrirCriarMusica">
+    Adicionar Musica
+  </button>
+  <button type="button" wire:click="editarMusica">
+   Editar Musica
+  </button>
+
+  @if ($criar)
+    <livewire:Pagina.Artista.Componente.FormNewMusic>
+
+@endif
+@if ($modal)
+    <livewire:Pagina.Artista.Componente.FormEditMusic>
+
+@endif
 </div>

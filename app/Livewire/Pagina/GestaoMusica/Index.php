@@ -43,10 +43,10 @@ class Index extends Component
     {
         $this->modal = true;
         $this->criar = false;
-        
+
     }
 
-    
+
 
     #[Layout('layout.front')]
     public function render()
