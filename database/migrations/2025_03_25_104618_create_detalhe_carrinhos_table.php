@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('carrinho_id')->constrained('carrinhos')->onDelete('cascade');
             $table->foreignId('musica_id')->constrained('musicas')->onDelete('cascade');
+            $table->integer('quantidade')->default(1);
             $table->timestamps();
         });
     }

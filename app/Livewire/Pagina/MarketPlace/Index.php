@@ -5,6 +5,8 @@ namespace App\Livewire\Pagina\MarketPlace;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 use App\Models\Musica;
+use App\Models\Carrinho;
+use App\Models\DetalheCarrinho;
 use App\Models\Wishlist;
 use Illuminate\Support\Facades\Auth;
 
@@ -49,4 +51,27 @@ class Index extends Component
             'wishlistIds' => $this->wishlistIds, // Pass this to the Blade view
         ]);
     }
+
+    public function adicionarMusica($musicaId)
+    {
+        $user = Auth::user();
+        $carrinho = Carrinho::firstOrCreate(['user_id' => $user->id]);
+
+        $item = DetalheCarrinho::where('carrinho_id', $carrinho->id)
+                               ->where('musica_id', $musicaId)
+                               ->first();
+
+        if ($item) {
+            $item->increment('quantidade');
+        } else {
+            DetalheCarrinho::create([
+                'carrinho_id' => $carrinho->id,
+                'musica_id' => $musicaId,
+                'quantidade' => 1,
+            ]);
+        }
+
+        session()->flash('success', 'Música adicionada ao carrinho!');
+    }
 }
+

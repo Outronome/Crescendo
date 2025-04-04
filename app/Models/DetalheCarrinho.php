@@ -11,4 +11,9 @@ class DetalheCarrinho extends Model
         'musica_id',
         'quantidade',
     ];
+
+    public function musica()
+{
+    return $this->belongsTo(Musica::class);
+}
 }

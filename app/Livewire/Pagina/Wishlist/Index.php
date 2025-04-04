@@ -42,10 +42,6 @@ class Index extends Component
         }
     }
 
-
-
-
-
     public function removeFromWishlist($musicaId)
 {
   
