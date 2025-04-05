@@ -6,7 +6,7 @@ use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
-use App\Models\CamposMusica;
+use App\Models\Musica as MusicaModel;
 
 class Musica extends Component
 {
@@ -57,8 +57,18 @@ class Musica extends Component
         $this->mostrarModal = true;
     }
 
+    public function editarMusica()
+    {
+        $this->modal = true;
+        $this->criar = false;
+
+    }
+
     public function render()
     {
-        return view('pagina.artista.componente.musica');
+        $musicas = MusicaModel::where('artist_id', Auth::id())->get();
+        return view('pagina.artista.componente.musica', [
+            'musicas' => $musicas
+        ]);
     }
 }

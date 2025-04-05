@@ -1,5 +1,4 @@
-<>
-  <section class="py-8 antialiased md:py-8">
+<section class="py-8 antialiased md:py-8">
     @section('topbar')
     <livewire:Layout.Topbar />
     @endsection
@@ -7,15 +6,13 @@
 
       <div class="flex items-center justify-between py-4 border-t border-gray-200">
         <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Visão Geral</h2>
-        <button type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2"
-          class="">
-          <svg class="h-7 w-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-            viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z">
-            </path>
-          </svg>
-        </button>
+        <button
+  type="button"
+  wire:click="abrirCriarMusica"
+  class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-200 ease-in-out"
+>
+  Adicionar Música
+</button>
       </div>
 
       <div
@@ -214,12 +211,12 @@
                 Vendas</button>
             </li>
           </ul>
-          <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
-            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel"
+          <div id="fullWidthTabContent" class="flex-col border-t border-gray-200 dark:border-gray-600">
+            <div class="flex-col hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel"
               aria-labelledby="stats-tab">
-              @for ($i = 0, $j = 5; $i < $j; $i++)
+             
                 <livewire:Pagina.Artista.Componente.Musica>
-                @endfor
+              
             </div>
             <div class="hidden p-4 bg-white rounded-lg md:p-4 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
               <livewire:blog />
@@ -367,14 +364,9 @@
         </div>
       </div>
     </div>
-    <button type="button" wire:click="abrirCriarMusica">
-    Adicionar Musica
-  </button>
-  <button type="button" wire:click="editarMusica">
-   Editar Musica
-  </button>
 
-  @if ($criar)
+
+@if ($criar)
     <livewire:Pagina.Artista.Componente.FormNewMusic>
 
 @endif
