@@ -9,15 +9,6 @@ class Wishlist extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'musica_id'];
+    protected $fillable = ['user_id',];
 
-    public function musica()
-    {
-        return $this->belongsTo(Musica::class);
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }

@@ -35,12 +35,12 @@ class RegistarUser extends Component
             'email' => $this->email,
             'password' => Hash::make($this->password),
         ]);
-        /*Carrinho::create([
+        Carrinho::create([
             'user_id' => $user->id,
         ]);
         Wishlist::create([
             'user_id' => $user->id,
-        ]);*/
+        ]);
 
         session()->flash('info', 'Verifique o email introduzido e faça a verificação do email.');
         $user->notify(new CustomEmailVerification());

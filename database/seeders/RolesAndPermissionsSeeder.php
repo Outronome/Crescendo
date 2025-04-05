@@ -15,23 +15,34 @@ class RolesAndPermissionsSeeder extends Seeder
      */
     public function run()
     {
-        // Criar permissão
-        /*$permission =*/ Permission::create(['name' => 'criar publicacao']);
-        /*$permission =*/ Permission::create(['name' => 'editar publicacao']);
-        /*$permission =*/ Permission::create(['name' => 'moderar publicacao']);
-        /*$permission =*/ Permission::create(['name' => 'eliminar publicacao']);
-        /*$permission =*/ Permission::create(['name' => 'criar musica']);
-        /*$permission =*/ Permission::create(['name' => 'editar musica']);
-        /*$permission =*/ Permission::create(['name' => 'moderar musica']);
-        /*$permission =*/ Permission::create(['name' => 'eliminar musica']);
-        /*$permission =*/ Permission::create(['name' => 'moderar comentario']);
-        /*$permission =*/ Permission::create(['name' => 'moderar utilizador']);
-        /*$permission =*/ Permission::create(['name' => 'criar administrador']);
-
-        // Criar role
-        //$role = Role::create(['name' => 'writer']);
-
-        // Associar permissão à role
-        //$role->givePermissionTo($permission);
+        $permissao_artista  = [
+            'criar publicacao',
+            'editar publicacao',
+            'moderar publicacao',
+            'eliminar publicacao',
+            'criar musica',
+            'editar musica',
+            'eliminar musica'
+            ];
+        $permissao_admin = [
+            'moderar musica',
+            'moderar comentario',
+            'moderar utilizador',
+            'criar administrador'
+        ];
+        $permissoes = array_unique(array_merge($permissao_artista, $permissao_admin));
+        
+        // Criando permissões em massa
+        foreach ($permissoes as $permission) {
+            Permission::firstOrCreate(['name' => $permission]);
+        }
+        
+        // Criando o role 'artista'
+        $artista = Role::firstOrCreate(['name' => 'artista']);
+        $admin = Role::firstOrCreate(['name' => 'admin']);
+        
+        // Atribuindo permissões ao role 'artista'
+        $artista->givePermissionTo($permissao_artista);
+        $admin->givePermissionTo($permissao_admin);
     }
 }
