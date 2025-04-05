@@ -8,6 +8,7 @@ use App\Models\Musica;
 use App\Models\Carrinho;
 use App\Models\DetalheCarrinho;
 use App\Models\Wishlist;
+use App\Models\DetalheWishlist;
 use Illuminate\Support\Facades\Auth;
 
 class Index extends Component
@@ -15,22 +16,34 @@ class Index extends Component
 
 
     public function loadWishlist()
-    {
-        $this->wishlistIds = Wishlist::where('user_id', Auth::id())->pluck('musica_id')->toArray();
-    }
+{
+    // Fetch the musica_ids from the detalhe_wishlists table
+    $this->wishlistIds = DetalheWishlist::whereHas('wishlist', function($query) {
+        $query->where('user_id', Auth::id());
+    })->pluck('musica_id')->toArray();
+}
 
     public function toggleWishlist($musicaId)
     {
         if (Auth::check()) {
-            $wishlistItem = Wishlist::where('user_id', Auth::id())->where('musica_id', $musicaId)->first();
-            if ($wishlistItem) {
-                $wishlistItem->delete();
+            // Get or create the user's wishlist
+            $wishlist = Wishlist::firstOrCreate(['user_id' => Auth::id()]);
+
+            // Check if the music already exists in 'detalhe_wishlists'
+            $detalhe = $wishlist->detalhes()->where('musica_id', $musicaId)->first();
+
+            if ($detalhe) {
+                // If the music exists, delete it from 'detalhe_wishlists'
+                $detalhe->delete();
             } else {
-                Wishlist::create(['user_id' => Auth::id(), 'musica_id' => $musicaId]);
+                // If the music doesn't exist, add it to 'detalhe_wishlists'
+                $wishlist->detalhes()->create(['musica_id' => $musicaId]);
             }
-            $this->wishlist = Wishlist::where('user_id', Auth::id())->pluck('musica_id')->toArray();
-            $this->loadWishlist();
+
+            // Get the updated list of music IDs in the wishlist from 'detalhe_wishlists'
+            $this->wishlist = $wishlist->detalhes()->pluck('musica_id')->toArray();
         } else {
+            // For non-authenticated users, use the session-based wishlist
             $wishlist = session()->get('wishlist', []);
             if (in_array($musicaId, $wishlist)) {
                 $wishlist = array_diff($wishlist, [$musicaId]);

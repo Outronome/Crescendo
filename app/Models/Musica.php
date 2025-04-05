@@ -27,4 +27,9 @@ class Musica extends Model
     {
         return $this->belongsToMany(User::class, 'wishlists', 'musica_id', 'user_id')->withTimestamps();
     }
+
+    public function detalhes()
+    {
+        return $this->hasMany(DetalheWishlist::class);
+    }
 }
