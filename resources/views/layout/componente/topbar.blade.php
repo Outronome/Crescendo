@@ -15,10 +15,12 @@
             </div>
             @if(Auth::check())
                 <!-- Carrinho -->
-                <button onclick="window.location.href='{{ route('carrinho') }}'" class="hidden md:block">
-                    <i
-                        class="fi fi-br-cart-shopping-fast text-2xl p-1 pl-2 pr-2 rounded-lg hover:bg-[#F0EAD6] text-black"></i>
-                </button>
+                 <a href="{{ route('carrinho') }}">                 
+                    <button  class="hidden md:block">
+                        <i
+                            class="fi fi-br-cart-shopping-fast text-2xl p-1 pl-2 pr-2 rounded-lg hover:bg-[#F0EAD6] text-black"></i>
+                    </button>
+                </a>
             @endif
 
             <!-- Menu -->
@@ -45,13 +47,16 @@
                         </a>
 
                     </li>
-                    <li>
-                        <a href=" {{ route('carrinho') }}"
-                            class="block md:hidden py-2 px-3 text-white rounded-sm hover:bg-[#FCF5E5] "
-                            aria-current="page"><i class="fi fi-br-cart-shopping-fast pt-1"></i>
-                            <span>Carrinho</span></a>
-                        </a>
-                    </li>
+                    
+                    @if(Auth::check())
+                        <li>
+                            <a href=" {{ route('carrinho') }}"
+                                class="block md:hidden py-2 px-3 text-white rounded-sm hover:bg-[#FCF5E5] "
+                                aria-current="page"><i class="fi fi-br-cart-shopping-fast pt-1"></i>
+                                <span>Carrinho</span></a>
+                            </a>
+                        </li>
+                    @endif
                     <li>
                         <a href=" {{ route('perfil') }}"
                             class="block py-2 px-3 text-black rounded-sm hover:bg-[#FCF5E5] " aria-current="page"><i
@@ -91,17 +96,37 @@
                     @if(Auth::check())
 
                         <li>
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <a class="flex items-center space-x-2  py-2 px-3 text-black rounded-sm hover:bg-[#FCF5E5]">
-                                    <button class="w-full text-start "><i class="fi fi-br-sign-out-alt pt-1"></i>
-                                        Logout</button>
-                                </a>
-
-                            </form>
-
-
+                            <a class="flex items-center space-x-2  py-2 px-3 text-black rounded-sm hover:bg-[#FCF5E5]">
+                                <button type="button" wire:click="logout" class="w-full text-start "><i class="fi fi-br-sign-out-alt pt-1"></i>
+                                    Logout
+                                </button>
+                            </a>
                         </li>
+                        @if(auth()->user()->can('moderar utilizador') || auth()->user()->can('criar administrador'))
+                            <li>
+                                <a href=" {{ route('gestao-user') }}"
+                                    class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
+                                        class="fi fi-br-stats pt-1"></i>
+                                    <span>Gestao Users</span>
+                                </a>
+                            </li>
+                        @endif
+                        @if(auth()->user()->can('moderar musica'))
+                            <li>
+                                <a href=" {{ route('gestao-musica') }}"
+                                    class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
+                                        class="fi fi-br-stats pt-1"></i>
+                                    <span>Painel Musicas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=" {{ route('tema') }}"
+                                    class="block py-2 px-3 text-white rounded-sm hover:bg-[#85b2bf] " aria-current="page"><i
+                                        class="fi fi-br-stats pt-1"></i>
+                                    <span>Gerir Tema</span>
+                                </a>
+                            </li>
+                        @endif
                     @endif
                     <li>
                         <a href=" {{ route('gestao-user') }}"
@@ -113,7 +138,6 @@
 
 
                 </ul>
-
             </div>
         </div>
 </nav>

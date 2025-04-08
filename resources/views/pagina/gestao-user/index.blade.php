@@ -21,13 +21,15 @@
                             placeholder="Pesquisar utilizador" wire:model.live='pesquisar_utilizador' />
                     </div>
                 </div>
-                <div class="pl-3">
-                    <button
-                        class="px-3 py-2 text-sm font-medium text-black bg-white border rounded-md "
-                        wire:click='criarAdmin'>
-                        Criar administrador
-                    </button>
-                </div>
+                @can('criar administrador')
+                    <div class="pl-3">
+                        <button
+                            class="px-3 py-2 text-sm font-medium text-white bg-slate-600 border rounded-md hover:bg-slate-500"
+                            wire:click='criarAdmin'>
+                            Criar administrador
+                        </button>
+                    </div>
+                @endcan
             </div>
 
             <div>

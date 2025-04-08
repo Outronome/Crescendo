@@ -15,6 +15,7 @@ class Index extends Component
     public $temas;
     public $editar = false;
     public $previsualizar = false;
+
     #[Layout('layout.front')]
     public function render()
     {

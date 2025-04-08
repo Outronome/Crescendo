@@ -5,7 +5,6 @@ namespace App\Livewire\Pagina\GestaoUser;
 use Livewire\Component;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 use Livewire\Attributes\Layout;
 
 class Index extends Component
@@ -17,6 +16,7 @@ class Index extends Component
     public $user_id;
     public $roles;
     public $permissoes_atribuidas;
+
 
     // Método para adicionar/remover permissões
     public function selecionarPermissoes($nome_permissao, $checked)
@@ -61,6 +61,10 @@ class Index extends Component
 
         // Recupera todas as permissões disponíveis
         $this->roles = Role::with('permissions')->get();
+    }
+    public function fecharPopUp()
+    {
+        $this->atribuir = false;
     }
     #[Layout('layout.front')]
     public function render()
