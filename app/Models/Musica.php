@@ -32,4 +32,9 @@ class Musica extends Model
     {
         return $this->hasMany(DetalheWishlist::class);
     }
+
+    public function detalhesCarrinho()
+    {
+        return $this->hasMany(DetalheCarrinho::class);
+    }
 }

@@ -50,6 +50,7 @@ class Musica extends Component
 
         $this->reset(['titulo', 'preco', 'tema', 'musica', 'foto_capa_music']);
         $this->dispatch('fecharModalNewMusic');
+        render();
     }
 
     public function abrirModalComentarios() // Adicionado para abrir o modal
