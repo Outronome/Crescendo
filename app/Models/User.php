@@ -64,4 +64,9 @@ public function wishlist()
     {
         return $this->hasOne(Wishlist::class);
     }
+
+    public function compras()
+{
+    return $this->hasMany(Compra::class);
+}
 }

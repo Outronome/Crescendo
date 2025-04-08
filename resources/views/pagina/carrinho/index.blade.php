@@ -76,38 +76,7 @@
 </div>
 
 
-      <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-6 lg:w-full">
-        <div class="space-y-4 rounded-lg  bg-[#66c6ba] p-4 shadow-sm  sm:p-6">
-          <p class="text-xl font-semibold text-gray-900 ">Order summary</p>
-
-          <div class="space-y-4">
-            <div class="space-y-2">
-              <dl class="flex items-center justify-between gap-4">
-                <dt class="text-base font-normal text-black ">Original price</dt>
-                <dd class="text-base font-medium text-gray-900 ">€4,99</dd>
-              </dl>
-
-              <dl class="flex items-center justify-between gap-4">
-                <dt class="text-base font-normal text-black">Savings</dt>
-                <dd class="text-base font-medium text-green-600">-€1,99</dd>
-              </dl>
-
-              <dl class="flex items-center justify-between gap-4">
-                <dt class="text-base font-normal text-black ">Store Pickup</dt>
-                <dd class="text-base font-medium text-gray-900 ">$4,99</dd>
-              </dl>
-
-              <dl class="flex items-center justify-between gap-4">
-                <dt class="text-base font-normal text-black">Tax</dt>
-                <dd class="text-base font-medium text-gray-900 ">€6,99</dd>
-              </dl>
-            </div>
-
-            <dl class="flex items-center justify-between gap-4 border-t border-black pt-2 ">
-              <dt class="text-base font-bold text-black ">Total</dt>
-              <dd class="text-base font-bold text-gray-900 ">€6,99</dd>
-            </dl>
-          </div>
+      
 
           <a href="{{ route('checkout') }}" class="flex w-full items-center justify-center bg-white rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 ">Proceed to Checkout</a>
 
