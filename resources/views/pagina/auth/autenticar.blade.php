@@ -34,7 +34,7 @@
           <label for="email"
             class="block mb-2 text-sm font-medium text-black ">Email</label>
           <input type="email" name="email" id="email" wire:model="email"
-            class="bg-[#66c6ba] border placeholder-gray-400 border-black text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  "
+            class="bg-white border placeholder-gray-400 border-black text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  "
             placeholder="name@company.com" id="email" name="email" value="{{ old('email') }}"
             required>
           @error('email')
@@ -45,7 +45,7 @@
           <label for="password"
             class="block mb-2 text-sm font-medium text-black ">Palavra-Passe</label>
           <input type="password" name="password" id="password" required placeholder="••••••••" wire:model="password"
-            class="bg-[#66c6ba] placeholder-gray-400 border border-black text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:border-gray-600 dark:placeholder-black  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="bg-white placeholder-gray-400 border border-black text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:border-gray-600 dark:placeholder-black  dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required="">
           @error('password')
           <span class="error">{{ $message }}</span>

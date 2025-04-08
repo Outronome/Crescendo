@@ -128,13 +128,7 @@
                             </li>
                         @endif
                     @endif
-                    <li>
-                        <a href=" {{ route('gestao-user') }}"
-                            class="block py-2 px-3 text-black rounded-sm hover:bg-[#FCF5E5] " aria-current="page"><i
-                                class="fi fi-br-stats pt-1"></i>
-                            <span>Painel Users</span>
-                        </a>
-                    </li>
+                   
 
 
                 </ul>

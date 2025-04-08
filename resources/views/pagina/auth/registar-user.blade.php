@@ -32,7 +32,7 @@
       </h1>
       <form class="space-y-4 md:space-y-6">
         @csrf
-        <div class="flex flex-row justify-around gap-6">
+        <div class="flex flex-col justify-around gap-6">
           <div class="w-full">
             <label for="text"
               class="block mb-2 text-sm font-medium text-black">Username</label>
@@ -55,7 +55,7 @@
             @enderror
           </div>
         </div>
-        <div class="flex flex-row justify-around gap-6">
+        <div class="flex flex-col justify-around gap-6">
           <div class="w-full">
             <label for="password"
               class="block mb-2 text-sm font-medium text-black">Password</label>
@@ -80,7 +80,7 @@
           </div>
         </div>
         <button type="button" wire:click="registar"
-          class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#85b2bf]  dark:focus:bg-[#649dad]">Create
+          class="w-full text-black bg-white hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Create
           an account</button>
         <p class="text-sm font-light text-black dark:black">
           Já tens uma conta? <a href="{{ route('login') }}"

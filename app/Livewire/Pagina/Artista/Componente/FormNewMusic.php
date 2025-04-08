@@ -42,7 +42,7 @@ class FormNewMusic extends Component
             'title' => $this->titulo,
             'price' => $this->preco,
             'genero' => $this->tema,
-            //'file_photo' => $this->foto_capa_music->store('photos', 'public'),
+            'file_photo' => $this->foto_capa_music->store('photos', 'public'),
             'file_url' => $caminho,
         ]);
 

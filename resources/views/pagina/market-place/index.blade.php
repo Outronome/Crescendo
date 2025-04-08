@@ -3,7 +3,7 @@
     @section('topbar')
         <livewire:Layout.Topbar />
     @endsection
-    <div x-data="musicPlayer()" class="bg-white p-8 rounded-lg shadow-md w-80">
+    {{--<div x-data="musicPlayer()" class="bg-white p-8 rounded-lg shadow-md w-80">
         <!-- Album Cover -->
         <img :src="albumCover" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
         
@@ -111,6 +111,7 @@
             };
         }
     </script>
+    --}}
 
     <div class="h-full w-full">
 
@@ -183,19 +184,20 @@
                             <div class="mb-4">
                                 <div
                                     class="rounded-lg border border-gray-200 bg-[#66c6ba] p-6 shadow-sm ">
-                                    <div class="h-56 w-full">
+                                    <div class="h-60 w-full">
                                         <a href="#" class="shrink-0 md:order-1">
+                                            
+                                            
                                             <!-- Music Image -->
-                                            <img src="{{ asset('storage/' . $musica->file_url) }}"
+                                            <img src="{{ asset('storage/' . $musica->file_photo) }}"
                                                 alt="{{ $musica->title }}"
-                                                class="w-60 h-60 mx-auto rounded-lg mb-4 shadow-lg shadow-black">
+                                                class="w-full h-full mx-auto rounded-lg mb-4 shadow-lg shadow-black">
                                         </a>
+                                        
                                     </div>
 
                                     <div class="pt-8">
                                         <div class="mb-4 flex items-center justify-between gap-4">
-
-
                                             <div class="flex items-center justify-end gap-1">
                                                 <button type="button" data-tooltip-target="tooltip-quick-look"
                                                     class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 ">
@@ -238,7 +240,7 @@
                                         </div>
                                         <div class="mt-4 flex items-center justify-between gap-4">
                                             <!-- Music Price -->
-                                            <p class="text-2xl font-extrabold leading-tight text-gray-900 ">
+                                            <p class="text-1xl font-extrabold leading-tight text-gray-900 ">
                                                 €{{ $musica->price }}</p>
 
                                             <button type="button" wire:click="adicionarMusica({{ $musica->id }})"

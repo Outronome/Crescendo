@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('price', 8, 2)->nullable();
             $table->string('file_url');
             $table->boolean('active')->default(true);
+            $table->string ('file_photo');
             $table->timestamps();
         });
     }

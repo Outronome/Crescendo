@@ -14,27 +14,27 @@
   </div>
   @endif
 
-  <div class="w-full bg-[#649dad] rounded-lg shadow md:mt-0 sm:max-w-xl xl:p-0 ">
+  <div class="w-full bg-[#66c6ba] rounded-lg shadow md:mt-0 sm:max-w-xl xl:p-0 ">
     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-      <h1 class="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl dark:text-white">
+      <h1 class="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl ">
         Criar Conta
       </h1>
       <form class="space-y-4 md:space-y-6">
         @csrf
-        <div class="flex flex-row justify-around gap-6">
+        <div class="flex flex-col justify-around gap-6">
           <div class="w-full">
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+            <label for="name" class="block mb-2 text-sm font-medium text-black">Username</label>
             <input type="text" name="name" id="name" wire:model="name"
-              class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 placeholder-gray-400 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
               placeholder="Batata" required>
             @error('name')
             <span class="error text-red-500">{{ $message }}</span>
             @enderror
           </div>
           <div class="w-full">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+            <label for="email" class="block mb-2 text-sm font-medium text-black">Your email</label>
             <input type="email" name="email" id="email" wire:model="email"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 placeholder-gray-400 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               placeholder="name@company.com" required>
             @error('email')
             <span class="error text-red-500">{{ $message }}</span>
@@ -42,21 +42,21 @@
           </div>
         </div>
 
-        <div class="flex flex-row justify-around gap-6">
+        <div class="flex flex-col justify-around gap-6">
           <div class="w-full">
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+            <label for="password" class="block mb-2 text-sm font-medium text-black">Password</label>
             <input type="password" name="password" id="password" placeholder="Password" wire:model="password"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 placeholder-gray-400 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               required>
             @error('password')
             <span class="error text-red-500">{{ $message }}</span>
             @enderror
           </div>
           <div class="w-full">
-            <label for="password_confirmation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+            <label for="password_confirmation" class="block mb-2 text-sm font-medium text-black">Confirm password</label>
             <input type="password" name="password_confirmation" id="password_confirmation" wire:model="password_confirmation"
               placeholder=" Confirm Password"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#85b2bf] dark:border-gray-600 dark:placeholder-black dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray-300 placeholder-gray-400 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
               required>
             @error('password_confirmation')
             <span class="error text-red-500">{{ $message }}</span>
@@ -66,7 +66,7 @@
 
         <div class="flex flex-row gap-6">
           <div class="w-3/4">
-            <label for="bio" class="block text-gray-700 text-sm font-bold mb-2">
+            <label for="bio" class="block text-black text-sm font-bold mb-2">
               Biografia
             </label>
             <textarea wire:model="bio" rows="5" placeholder="Enter your content" id="bio"
@@ -77,15 +77,15 @@
           </div>
           <div class="w-1/4 mt-6">
             <div class="relative w-full group">
-              <div class="relative z-40 cursor-pointer group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300 bg-neutral-900 flex items-center justify-center h-32 w-32 mx-auto rounded-xl">
-                <svg class="h-6 w-6 text-white/60" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <div class="relative z-40 cursor-pointer group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300 bg-white flex items-center justify-center h-28 w-28 mt-1 mx-auto rounded-xl">
+                <svg class="h-6 w-6 text-black" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
                   <path d="M7 9l5 -5l5 5"></path>
                   <path d="M12 4l0 12"></path>
                 </svg>
               </div>
               <div class="absolute inset-y-9 z-50 bg-transparent flex items-center justify-center h-32 w-32 mx-auto rounded-xl">
-                <span class="text-white/60 text-center font-semibold text-sm px-4">Foto de perfil</span>
+                <span class="text-black text-center font-semibold text-sm px-4 mb-8">Foto de perfil</span>
               </div>
 
               <input type="file" accept="image/*" class="absolute inset-0 z-50 w-full h-full opacity-0 cursor-pointer" wire:model="profile_pic" />
@@ -104,7 +104,7 @@
         </div>
 
         <button type="button" wire:click="registarArtista"
-          class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#85b2bf] dark:focus:bg-[#649dad]">
+          class="w-full text-black bg-white hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
           Criar Conta
         </button>
 
@@ -113,7 +113,7 @@
         </p>
 
         <p class="text-sm font-light text-black dark:text-black">
-          Queres registar-te como um artista? <a href="{{ route('registar-artista') }}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Regista-te Aqui!</a>
+          Queres registar-te como um cliente? <a href="{{ route('registar') }}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Regista-te Aqui!</a>
         </p>
       </form>
     </div>

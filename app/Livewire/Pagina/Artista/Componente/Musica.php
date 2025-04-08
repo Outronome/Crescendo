@@ -27,6 +27,9 @@ class Musica extends Component
     #[Validate('required|file|mimes:jpg,png,webp|max:10240')]
     public $foto_capa_music;
 
+    public $criar = false;
+    public $modal = false;
+    
     public $mostrarModal = false; // Adicionado para controlar a visibilidade do modal
 
     public function criarMusica()
@@ -35,7 +38,7 @@ class Musica extends Component
         // dd($validatedData); // Verifique os dados validados
         $caminho = $this->musica->store('musicas', 'public');
         // dd($caminho); // Verifique o caminho do ficheiro de música
-        $fotoCapa = $this->foto_capa_music->store('photos', 'public');
+        $fotoCapa = $this->foto_capa_music->storeAs('photos', 'public');
         // dd($fotoCapa); // Verifique o caminho da foto de capa
 
         $caminho = $this->musica->store('musicas', 'public');
@@ -44,10 +47,10 @@ class Musica extends Component
             'title' => $this->titulo,
             'price' => $this->preco,
             'genero' => $this->tema,
-            'file_photo' => $this->foto_capa_music->store('photos', 'public'),
+            'file_photo' => $fotoCapa,
             'file_url' => $caminho,
         ]);
-
+        
         $this->reset(['titulo', 'preco', 'tema', 'musica', 'foto_capa_music']);
         $this->dispatch('fecharModalNewMusic');
     }
@@ -63,9 +66,18 @@ class Musica extends Component
         $this->criar = false;
 
     }
+  
+    public $isPlaying = false;
 
+    public function togglePlay()
+    {
+        $this->isPlaying = !$this->isPlaying;
+        $this->dispatch('toggle-audio', isPlaying: $this->isPlaying);
+    }
     public function render()
     {
+        
+
         $musicas = MusicaModel::where('artist_id', Auth::id())->get();
         return view('pagina.artista.componente.musica', [
             'musicas' => $musicas

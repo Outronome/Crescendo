@@ -57,6 +57,7 @@ class Index extends Component
     #[Layout('layout.front')]
     public function render()
     {
+        
         $this->loadWishlist();
         $musicas = Musica::where('active', 1)->get(); // Only get active songs
         return view('pagina.market-place.index', [
