@@ -7,12 +7,13 @@ use Livewire\Component;
 class Blog extends Component
 {
     public $posts = [];
-    public $modo = 'lista'; // lista, editar, comentar
-    public $postAtual = null;
+    public $modo = 'lista'; // lista, editar, criar, comentar
+    public $postAtual = ['title' => '', 'content' => ''];
     public $comentario = '';
     public $mostrarPopup = false;
     public $mostrarPopupEditar = false;
     public $mostrarPopupComentar = false;
+    public $mostrarPopupCriar = false;
 
     public function mount()
     {
@@ -31,6 +32,13 @@ class Blog extends Component
     public function gerirBlogs()
     {
         $this->mostrarPopup = true;
+    }
+
+    public function criarNovoPost()
+    {
+        $this->postAtual = ['title' => '', 'content' => ''];
+        $this->modo = 'criar';
+        $this->mostrarPopupCriar = true;
     }
 
     public function editarPost($postId)
@@ -58,6 +66,24 @@ class Blog extends Component
         // Lógica para guardar o post editado
         dd('Guardar Post: ', $this->postAtual);
         $this->mostrarPopupEditar = false;
+        $this->modo = 'lista';
+        $this->postAtual = ['title' => '', 'content' => ''];
+    }
+
+    public function salvarNovoPost()
+    {
+        $newId = count($this->posts) + 1;
+        $this->posts[] = [
+            'id' => $newId,
+            'title' => $this->postAtual['title'],
+            'content' => $this->postAtual['content'],
+            'date' => now()->format('d de F de Y'),
+            'author' => 'Utilizador', // Ou outra lógica para o autor
+        ];
+
+        $this->mostrarPopupCriar = false;
+        $this->modo = 'lista';
+        $this->postAtual = ['title' => '', 'content' => ''];
     }
 
     public function guardarComentario()
@@ -65,6 +91,9 @@ class Blog extends Component
         // Lógica para guardar o comentário
         dd('Guardar Comentário: ', $this->comentario);
         $this->mostrarPopupComentar = false;
+        $this->modo = 'lista';
+        $this->postAtual = null;
+        $this->comentario = '';
     }
 
     public function visualizarPost($postId)
