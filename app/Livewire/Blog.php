@@ -13,6 +13,8 @@ class Blog extends Component
     public $mostrarPopup = false;
     public $mostrarPopupEditar = false;
     public $mostrarPopupComentar = false;
+    public $mostrarPopupCriar = false;
+    public $novoPost = ['title' => '', 'content' => ''];
 
     public function mount()
     {
@@ -31,6 +33,13 @@ class Blog extends Component
     public function gerirBlogs()
     {
         $this->mostrarPopup = true;
+        $this->mostrarPopupCriar = false;
+    }
+
+    public function criarNovoPost()
+    {
+        $this->mostrarPopupCriar = true;
+        $this->mostrarPopup = false;
     }
 
     public function editarPost($postId)
@@ -58,6 +67,23 @@ class Blog extends Component
         // Lógica para guardar o post editado
         dd('Guardar Post: ', $this->postAtual);
         $this->mostrarPopupEditar = false;
+    }
+
+    public function salvarNovoPost()
+    {
+        $novoId = count($this->posts) + 1; // Cria um ID simples
+        $this->posts[] = [
+            'id' => $novoId,
+            'title' => $this->novoPost['title'],
+            'content' => $this->novoPost['content'],
+            'date' => now()->format('d de F de Y'), // Usa a data atual
+            'author' => 'Tu', // Por agora, o autor é tu
+        ];
+
+        // Limpa o formulário e esconde-o
+        $this->novoPost = ['title' => '', 'content' => ''];
+        $this->mostrarPopupCriar = false;
+        $this->modo = 'lista'; // Volta para a lista de blogs
     }
 
     public function guardarComentario()
