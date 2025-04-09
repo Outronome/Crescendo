@@ -21,7 +21,11 @@ class Compra extends Model
     public function musicas()
     {
         return $this->belongsToMany(Musica::class, 'compra_musica')
-                    ->withPivot('preco')
                     ->withTimestamps();
     }
+
+    public function cliente()
+{
+    return $this->belongsTo(User::class, 'user_id');
+}
 }

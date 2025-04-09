@@ -4,9 +4,12 @@ namespace App\Livewire\Pagina\Checkout;
 use Livewire\Component;
 use App\Models\Carrinho;
 use App\Models\Compra;
+use App\Models\FaturaComprada;
 use App\Models\CompraMusica;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Layout;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CompraFinalizadaMail;
 
 class Index extends Component
 {
@@ -77,13 +80,14 @@ class Index extends Component
 
         // Update the total of the purchase
         $compra->update(['total' => $total]);
-
+        Mail::to($user->email)->send(new CompraFinalizadaMail($compra));
         // Clear the cart (remove all items from the cart)
         $carrinho->detalhesCarrinho()->delete();
 
         // Flash success message
         session()->flash('success', 'Compra finalizada com sucesso!');
-        return redirect()->route('/');
+       
+        return redirect()->route('inicio');
     }
 
     #[Layout('layout.front')]

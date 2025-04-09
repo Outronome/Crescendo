@@ -42,3 +42,8 @@ Route::get('/dashboard', Dashboard::class)
     ->middleware('can:view_dashboard');
 */
 
+Route::get('/fatura/download/{id}', function ($id) {
+    $compra = App\Models\Compra::findOrFail($id);
+
+    return Storage::download($compra->fatura_path);
+})->name('fatura.download')->middleware(['auth']);

@@ -124,5 +124,6 @@ return [
     ],
 
     App\Providers\FortifyServiceProvider::class,
+    'Pdf' => Barryvdh\DomPDF\Facade\Pdf::class,
 
 ];
