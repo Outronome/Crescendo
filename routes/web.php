@@ -43,3 +43,11 @@ Route::get('/reset-password/{token}',App\Livewire\Pagina\Auth\Redefinir::class)-
 Route::get('/email/verify/{id}/{hash}', App\Livewire\Pagina\Auth\VerificarEmail::class)->name('verification.verify');
 
 
+/*EXEMPLO DE ROTAS Com Permissões
+Route::middleware(['can:view_dashboard', 'can:edit_post'])->group(function () {
+    Route::get('/dashboard', Dashboard::class);
+    Route::get('/posts', Posts::class);
+}); 
+Route::get('/dashboard', Dashboard::class)
+    ->middleware('can:view_dashboard');
+*/
