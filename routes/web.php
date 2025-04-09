@@ -41,4 +41,3 @@ Route::middleware(['can:view_dashboard', 'can:edit_post'])->group(function () {
 Route::get('/dashboard', Dashboard::class)
     ->middleware('can:view_dashboard');
 */
-
