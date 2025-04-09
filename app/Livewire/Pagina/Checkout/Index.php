@@ -75,7 +75,7 @@ class Index extends Component
             ]);
 
             // Calculate the total price of the purchase
-            $total += $item->musica->preco * $item->quantidade;
+            $total += $item->musica->price * $item->quantidade;
         }
 
         // Update the total of the purchase
