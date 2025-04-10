@@ -4,23 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\DetalheWishlist;
 
 class Wishlist extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id',];
+    protected $fillable = ['user_id', 'musica_id'];
 
-    public function detalhes()
+    public function musica()
     {
-        return $this->hasMany(DetalheWishlist::class);
+        return $this->belongsTo(Musica::class);
     }
 
-    // Relationship to 'musicas' table through 'detalhe_wishlists'
-    public function musicas()
+    public function user()
     {
-        return $this->hasManyThrough(Musica::class, DetalheWishlist::class, 'wishlist_id', 'id', 'id', 'musica_id');
+        return $this->belongsTo(User::class);
     }
-
 }

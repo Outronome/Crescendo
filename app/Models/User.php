@@ -59,14 +59,8 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
     }
 
-
-public function wishlist()
-    {
-        return $this->hasOne(Wishlist::class);
-    }
-
-    public function compras()
+    public function wishlist()
 {
-    return $this->hasMany(Compra::class);
+    return $this->belongsToMany(Musica::class, 'wishlists', 'user_id', 'musica_id')->withTimestamps();
 }
 }

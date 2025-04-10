@@ -12,6 +12,4 @@ class Musica extends Component
     {
         return view('pagina.market-place.componente.musica');
     }
-
-    
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Livewire\Pagina\Checkout;
 
 use Livewire\Component;
@@ -93,12 +94,6 @@ class Index extends Component
     #[Layout('layout.front')]
     public function render()
     {
-        // Load checkout items when rendering the page
-        $this->loadCheckoutItems();
-        
-        // Return the checkout view with items and total
-        return view('pagina.checkout.index', [
-            'itens' => $this->itens,
-            'total' => $this->total,
-        ]);
-    }}
+        return view('pagina.checkout.index');
+    }
+}

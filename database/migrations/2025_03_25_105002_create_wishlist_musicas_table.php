@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('musicas', function (Blueprint $table) {
+        Schema::create('wishlist_musicas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('artist_id')->constrained('users')->onDelete('cascade');
-            $table->string('title');
-            $table->string('genero');
-            $table->decimal('price', 8, 2)->nullable();
-            $table->string('file_url');
-            $table->boolean('active')->default(true);
+            $table->foreignId('wishlist_id')->constrained('wishlists')->onDelete('cascade');
+            $table->foreignId('musica_id')->constrained('musicas')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('musicas');
+        Schema::dropIfExists('wishlist_musicas');
     }
 };

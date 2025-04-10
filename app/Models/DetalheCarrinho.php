@@ -11,14 +11,4 @@ class DetalheCarrinho extends Model
         'musica_id',
         'quantidade',
     ];
-
-    public function carrinho()
-    {
-        return $this->belongsTo(Carrinho::class);
-    }
-
-    public function musica()
-{
-    return $this->belongsTo(Musica::class);
-}
 }

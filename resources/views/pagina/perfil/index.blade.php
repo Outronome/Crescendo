@@ -5,7 +5,7 @@
   <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
 
     <div class="flex items-center justify-between py-4 border-t border-gray-200">
-      <h2 class="text-xl font-semibold text-black  sm:text-2xl">Visão Geral</h2>
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Visão Geral</h2>
     </div>
 
     <div

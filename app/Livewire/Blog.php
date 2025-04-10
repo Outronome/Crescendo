@@ -7,13 +7,14 @@ use Livewire\Component;
 class Blog extends Component
 {
     public $posts = [];
-    public $modo = 'lista'; // lista, editar, criar, comentar
-    public $postAtual = ['title' => '', 'content' => ''];
+    public $modo = 'lista'; // lista, editar, comentar
+    public $postAtual = null;
     public $comentario = '';
     public $mostrarPopup = false;
     public $mostrarPopupEditar = false;
     public $mostrarPopupComentar = false;
     public $mostrarPopupCriar = false;
+    public $novoPost = ['title' => '', 'content' => ''];
 
     public function mount()
     {
@@ -32,13 +33,13 @@ class Blog extends Component
     public function gerirBlogs()
     {
         $this->mostrarPopup = true;
+        $this->mostrarPopupCriar = false;
     }
 
     public function criarNovoPost()
     {
-        $this->postAtual = ['title' => '', 'content' => ''];
-        $this->modo = 'criar';
         $this->mostrarPopupCriar = true;
+        $this->mostrarPopup = false;
     }
 
     public function editarPost($postId)
@@ -66,24 +67,23 @@ class Blog extends Component
         // Lógica para guardar o post editado
         dd('Guardar Post: ', $this->postAtual);
         $this->mostrarPopupEditar = false;
-        $this->modo = 'lista';
-        $this->postAtual = ['title' => '', 'content' => ''];
     }
 
     public function salvarNovoPost()
     {
-        $newId = count($this->posts) + 1;
+        $novoId = count($this->posts) + 1; // Cria um ID simples
         $this->posts[] = [
-            'id' => $newId,
-            'title' => $this->postAtual['title'],
-            'content' => $this->postAtual['content'],
-            'date' => now()->format('d de F de Y'),
-            'author' => 'Utilizador', // Ou outra lógica para o autor
+            'id' => $novoId,
+            'title' => $this->novoPost['title'],
+            'content' => $this->novoPost['content'],
+            'date' => now()->format('d de F de Y'), // Usa a data atual
+            'author' => 'Tu', // Por agora, o autor é tu
         ];
 
+        // Limpa o formulário e esconde-o
+        $this->novoPost = ['title' => '', 'content' => ''];
         $this->mostrarPopupCriar = false;
-        $this->modo = 'lista';
-        $this->postAtual = ['title' => '', 'content' => ''];
+        $this->modo = 'lista'; // Volta para a lista de blogs
     }
 
     public function guardarComentario()
@@ -91,9 +91,6 @@ class Blog extends Component
         // Lógica para guardar o comentário
         dd('Guardar Comentário: ', $this->comentario);
         $this->mostrarPopupComentar = false;
-        $this->modo = 'lista';
-        $this->postAtual = null;
-        $this->comentario = '';
     }
 
     public function visualizarPost($postId)

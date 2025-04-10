@@ -83,25 +83,24 @@
 
     <div x-data="{ open: @entangle('mostrarPopup') }">
         <div x-show="open" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div class="bg-[#66c6ba] p-6 rounded-lg w-3/4">
-                <h2 class="font-bold mb-5">Gerir Blogs</h2>
+            <div class="bg-white p-8 rounded-lg w-4/5 md:w-3/4 lg:w-2/3">
                 <button wire:click="criarNovoPost" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">Criar Blog</button>
-                <table class="w-full ">
+                <table class="w-full mt-4">
                     <thead>
                         <tr>
-                            <th class="text-start">Título</th>
-                            <th class="text-start">Descrição</th>
-                            <th class="text-center">Ações</th>
+                            <th class="text-left">Título</th>
+                            <th class="text-left">Descrição</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($posts as $post)
                             <tr>
-                                <td class="">{{ $post['title'] }}</td>
-                                <td class="mr-5">{{ $post['content'] }}</td>
-                                <td class="text-center">
-                                    <button wire:click="editarPost({{ $post['id'] }})" class=" text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32">Editar</button>
-                                    <button wire:click="visualizarPost({{ $post['id'] }})" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded w-32">Visualizar</button>
+                                <td>{{ $post['title'] }}</td>
+                                <td>{{ $post['content'] }}</td>
+                                <td>
+                                    <button wire:click="editarPost({{ $post['id'] }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Editar</button>
+                                    <button wire:click="visualizarPost({{ $post['id'] }})" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Visualizar</button>
                                 </td>
                             </tr>
                         @endforeach
@@ -156,17 +155,17 @@
     <div x-data="{ open: @entangle('mostrarPopupCriar') }">
         <div x-show="open" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
             <div class="bg-white p-6 rounded-lg">
-                <h2>Criar Novo Post</h2>
+                <h2>Criar Novo Blog</h2>
                 <form wire:submit.prevent="salvarNovoPost">
                     <label for="title">Título:</label>
-                    <input type="text" id="title" wire:model="postAtual.title">
+                    <input type="text" id="title" wire:model="novoPost.title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
 
                     <label for="content">Conteúdo:</label>
-                    <textarea id="content" wire:model="postAtual.content"></textarea>
+                    <textarea id="content" wire:model="novoPost.content" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
 
-                    <button type="submit">Guardar Novo Blog</button>
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Guardar Novo Blog</button>
                 </form>
-                <button wire:click="$set('mostrarPopupCriar', false)">Fechar</button>
+                <button wire:click="$set('mostrarPopupCriar', false)" class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Fechar</button>
             </div>
         </div>
     </div>

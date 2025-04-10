@@ -15,6 +15,7 @@ class Index extends Component
 
     public $modal = false;
 
+
     public function toggleActive($id)
     {
         $musica = Musica::findOrFail($id);

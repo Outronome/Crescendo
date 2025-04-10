@@ -3,78 +3,75 @@
 namespace App\Livewire\Pagina\GestaoUser;
 
 use Livewire\Component;
-use App\Models\User;
-use Spatie\Permission\Models\Role;
 use Livewire\Attributes\Layout;
+use App\Models\User;
+use Livewire\Attributes\On;
+use Spatie\Permission\Models\Role;
 
 class Index extends Component
 {
     public $modal_atribuicao_utilizadores = false;
     public $utilizadores;
     public $pesquisar_utilizador;
-    public $atribuir = false;
-    public $user_id;
-    public $roles;
-    public $permissoes_atribuidas;
+    /*
 
+    
 
-    // Método para adicionar/remover permissões
-    public function selecionarPermissoes($nome_permissao, $checked)
+    
+
+    public $utilizador_id;
+    
+    public $role_id;
+
+    #[On('fecharModalAtribuicaoPermissao')]
+    public function modalAtribuicaoPermissao($utilizador_id)
     {
-        // Busca o usuário
-        $user = User::find($this->user_id);
+        
+        $roles = Role::all();
 
-        // Se a permissão não foi atribuída e o checkbox foi marcado
-        if ($checked) {
-            // Adiciona a permissão ao usuário
-            $user->givePermissionTo($nome_permissao);
-        } else {
-            // Se o checkbox foi desmarcado, remove a permissão do usuário
-            $user->revokePermissionTo($nome_permissao);
+        $this->utilizador_id = $utilizador_id;
+
+        for($i = 0; $i < count($roles); $i++)
+        {
+            $this->role_id = $roles[$i]->id;
         }
 
-        // Atualiza o array de permissões atribuídas
-        $this->atualizarPermissoesAtribuidas($user);
+        $this->modal_atribuicao_utilizadores = !$this->modal_atribuicao_utilizadores;
     }
 
-    // Atualiza o array de permissões atribuídas ao usuário
-    public function atualizarPermissoesAtribuidas($user)
+    public function ativarDesativarUtilizador($ativo, $utilizador_id)
     {
-        // Recupera as permissões atribuídas ao usuário
-        $this->permissoes_atribuidas = $user->permissions->pluck('name')->toArray();
-    }
+        $utilizador = User::find($utilizador_id);
 
-    public function criarAdmin()
-    {
+        if($ativo == 0 && $utilizador_id)
+        {
+            $utilizador->ativo = $ativo = 1;
+
+            $utilizador->save();
+        }
+        elseif($utilizador_id)
+        {
+            $utilizador->ativo = $ativo = 0;
+
+            $utilizador->save();
+        }
+    }*/
+    public function criarAdmin(){
         return redirect()->route("registar-admin");
-    }
-
-    // Método para editar permissões de um usuário
-    public function editarPermissoes($id)
-    {
-        $this->user_id = $id;
-        $this->atribuir = true;
-        $user = User::with('permissions')->find($this->user_id);
-
-        // Extrai as permissões atribuídas ao usuário
-        $this->permissoes_atribuidas = $user->permissions->pluck('name')->toArray();
-
-        // Recupera todas as permissões disponíveis
-        $this->roles = Role::with('permissions')->get();
-    }
-    public function fecharPopUp()
-    {
-        $this->atribuir = false;
     }
     #[Layout('layout.front')]
     public function render()
     {
-        if ($this->pesquisar_utilizador) {
+        if($this->pesquisar_utilizador)
+        {
             $this->utilizadores = User::where('name', 'like', '%' . $this->pesquisar_utilizador . '%')
-                ->orWhere('email', 'like', '%' .  $this->pesquisar_utilizador . '%')->get();
-        } else {
-            $this->utilizadores = User::all();
+            ->orWhere('email', 'like', '%' .  $this->pesquisar_utilizador . '%')->get();
+
         }
+        else
+        {
+            $this->utilizadores = User::all();
+        }   
 
         return view('pagina.gestao-user.index');
     }
