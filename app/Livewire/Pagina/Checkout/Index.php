@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Layout;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\CompraFinalizadaMail;
+use Illuminate\Http\Request;
 
 class Index extends Component
 {
@@ -21,6 +22,51 @@ class Index extends Component
         // Load the cart items when the component is mounted
         $this->loadCheckoutItems();
     }
+
+    public function iniciarPagamento()
+{
+    $user = Auth::user();
+
+    $carrinho = Carrinho::with('detalhesCarrinho.musica')->where('user_id', $user->id)->first();
+
+    if (!$carrinho || $carrinho->detalhesCarrinho->isEmpty()) {
+        session()->flash('error', 'Carrinho vazio.');
+        return;
+    }
+
+    $total = 0;
+    foreach ($carrinho->detalhesCarrinho as $item) {
+        $total += $item->musica->price * $item->quantidade;
+    }
+
+    \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+
+    $session = \Stripe\Checkout\Session::create([
+        'payment_method_types' => ['card'],
+        'line_items' => [[
+            'price_data' => [
+                'currency' => 'brl',
+                'product_data' => ['name' => 'Compra de músicas'],
+                'unit_amount' => $total * 100,
+            ],
+            'quantity' => 1,
+        ]],
+        'mode' => 'payment',
+        'customer_email' => $user->email,
+        'success_url' => route('pagamento.sucesso'),
+        'cancel_url' => route('inicio'),
+    ]);
+
+    return redirect()->away($session->url);
+}
+
+public function pagamentoSucesso()
+{
+    $this->finalizarCompra();
+
+    return redirect()->route('inicio')
+        ->with('success', 'Pagamento confirmado e compra finalizada!');
+}
 
     public function loadCheckoutItems()
     {

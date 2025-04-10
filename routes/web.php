@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Pagina\Checkout\Index;
 
 #TODOS USERS
 Route::get('/', App\Livewire\Pagina\Inicio\Index::class)->name('inicio');
@@ -47,3 +48,7 @@ Route::get('/fatura/download/{id}', function ($id) {
 
     return Storage::download($compra->fatura_path);
 })->name('fatura.download')->middleware(['auth']);
+
+Route::get('/checkout/sucesso', [App\Livewire\Pagina\Checkout\Index::class, 'pagamentoSucesso'])
+    ->name('pagamento.sucesso')
+    ->middleware('verified');
